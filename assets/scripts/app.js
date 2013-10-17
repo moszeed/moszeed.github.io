@@ -14473,7 +14473,7 @@ var LifeStream = {};
                     }],
 
         initialize : function() {
-            this.render();
+            //this.render();
         },
 
         render : function() {
