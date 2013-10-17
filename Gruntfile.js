@@ -7,9 +7,10 @@ module.exports = function(grunt) {
 
             //for javascript files
             javascript: {
-
-                files: ['assets/scripts/libs/**/*.js'],
-                tasks: 'javascript'
+                tasks: 'javascript',
+                files: ['assets/scripts/libs/**/*.js',
+                        'assets/scripts/modules/*.js',
+                        'assets/scripts/pages/*.js']
             },
 
             //for less files
@@ -47,17 +48,27 @@ module.exports = function(grunt) {
 
                 src:    [
 
+                    //jquery and plugins
                     'assets/scripts/libs/jquery/jquery-2.0.3.js',
                     'assets/scripts/libs/jquery/plugins/jquery.lifestream.js',
 
                     //underscore and plugins
                     'assets/scripts/libs/underscore/underscore.js',
+                    'assets/scripts/libs/underscore/underscore.string.js',
 
                     //backbone and plugins
-                    'assets/scripts/libs/backbone/backbone.js'
+                    'assets/scripts/libs/backbone/backbone.js',
+                    'assets/scripts/libs/backbone/plugins/backbone-template.js',
+                    'assets/scripts/libs/backbone/plugins/backbone-configloader.js',
+
+                    'assets/scripts/modules/lifestream.module.js',
+                    'assets/scripts/modules/main.module.js',
+                    'assets/scripts/modules/router.module.js',
+
+                    'assets/scripts/pages/start.pages.js'
                 ],
 
-                dest:   'assets/js/app.js'
+                dest:   'assets/scripts/app.js'
             }
         },
 
@@ -70,8 +81,8 @@ module.exports = function(grunt) {
             },
 
             src: {
-                src:    "assets/style/main.less",
-                dest:   "assets/style/main.css"
+                src:    "assets/styles/main.less",
+                dest:   "assets/styles/main.css"
             }
         }
     });
