@@ -9,18 +9,35 @@
         <link href="assets/styles/main.css" rel="stylesheet" media="screen"/>
 
     </head>
+
     <body>
 
         <div id="sidebar">
-            <div id="about">
-                <div class="g-person" data-width="400" data-href="//plus.google.com/100691045032903075638" data-rel="author"></div>
+
+            <div id="gplus">
+                <div class="g-person" data-width="340" data-href="//plus.google.com/100691045032903075638" data-layout="landscape" data-showcoverphoto="false" data-rel="author"></div>
             </div>
-            <div id="lifestream"></div>
+
+            <div id="twitter"> </div>
+
+            <div id="about">
+                <h2>About</h2>
+                <p>Hi and welcome, i am Moszeed, from Germany. I love to write Code, to create Apps, Pages and Modules.</p>
+            </div>
         </div>
 
         <div id="main"></div>
 
         <script src="assets/scripts/app.min.js"></script>
-        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+        <script type="text/javascript">
+          (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+          })();
+        </script>
+
+
     </body>
 </html>
+
