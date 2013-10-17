@@ -1,8 +1,8 @@
 [{
-    "create_date"   : 2222,
+    "create_date"   : 1382058000,
     "name"          : "jsconfeu2013",
-    "description"   : "JSConf EU 2013 Summary"  }, {
+    "description"   : "JSConf EU 2013 summary"  }, {
 
-    "create_date"   : 2222,
+    "create_date"   : 1382058000,
     "name"          : "rejectjs2013",
-    "description"   : "Reject.js 2013 Summary"  }]
+    "description"   : "Reject.js 2013 summary"  }]

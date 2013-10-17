@@ -29,5 +29,3 @@ var LifeStream = {};
         }
 
     });
-
-    LifeStream.current = new LifeStream.View();

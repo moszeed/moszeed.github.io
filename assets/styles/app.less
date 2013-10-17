@@ -29,11 +29,53 @@ menu, ul {
 #main {
     position : absolute;
     top      : 0;
+    padding-top : 50px;
     left     : 450px;
     right    : 0;
     bottom   : 0;
     overflow : auto;
 }
+
+#main.start {
+
+    #pageIndex {
+
+        ul {
+
+            li {
+                margin-bottom: 5px;
+                font-size: 1.8em;
+                color    : #0039a6;
+
+                &:hover {
+                    cursor : pointer;
+                    color  : #444444;
+                }
+            }
+        }
+
+        span {
+            display: inline-block;
+
+            &.create_date {
+                font-size: 0.7em;
+                width  : 150px;
+            }
+
+            &.description {
+                width : 400px;
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
 
 #about,
 #gplus,
@@ -57,7 +99,7 @@ menu, ul {
 #about {
     color   : #666666;
     top     : 10px;
-    padding : 30px;
+    padding : 40px;
 }
 
 #lifestream {
