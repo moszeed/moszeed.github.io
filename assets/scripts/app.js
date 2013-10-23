@@ -14617,7 +14617,35 @@ var Start = {};
                         $(that.$el).html('<ul>' + li.join('') + '</ul>');
                     });
         }
+    });
 
+    Start.socialIndex = Backbone.View.extend({
+
+        el : "#main.start #socialIndex",
+        list    : [{
+                        service : "github",
+                        user    : "moszeed"
+                    }, {
+                        service : "twitter",
+                        user    : "moszeed"
+                    }, {
+                        service : "googleplus",
+                        key     : "AIzaSyBFfPGCjTNKb1lb0VGHkW5404XyNrGRrPA",
+                        user    : "100691045032903075638"
+                    }],
+
+        initialize : function() {
+            this.render();
+        },
+
+        render : function() {
+
+            var that = this;
+            $(this.$el).lifestream({
+                limit   : 30,
+                list    : that.list
+            });
+        }
     });
 
     Start.View = Backbone.View.extend({
@@ -14626,7 +14654,8 @@ var Start = {};
         initialize  : function() {
 
             var that = this;
-                that.pageIndex = new Start.pageIndex();
+                that.pageIndex      = new Start.pageIndex();
+                that.socialIndex    = new Start.socialIndex();
 
         }
     });
