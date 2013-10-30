@@ -61,10 +61,14 @@ module.exports = function(grunt) {
                     'assets/scripts/libs/backbone/plugins/backbone-template.js',
                     'assets/scripts/libs/backbone/plugins/backbone-configloader.js',
 
+                    'assets/scripts/libs/functions.js',
+
                     'assets/scripts/modules/lifestream.module.js',
                     'assets/scripts/modules/main.module.js',
+                    'assets/scripts/modules/sidebar.module.js',
                     'assets/scripts/modules/router.module.js',
 
+                    'assets/scripts/pages/easysoap.pages.js',
                     'assets/scripts/pages/start.pages.js'
                 ],
 

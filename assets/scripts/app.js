@@ -14455,6 +14455,18 @@ $.fn.lifestream.feeds.zotero = function( config, callback ) {
     };
 
 })();
+function unixToDate(unix_timestamp) {
+
+    var date = new Date(unix_timestamp*1000);
+    var day = date.getDate();
+    var month = date.getMonth();
+    var year = date.getFullYear();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+
+    return day + '.' + month + '.' + year;
+}
 var LifeStream = {};
 
     LifeStream.View = Backbone.View.extend({
@@ -14528,6 +14540,25 @@ var Main = {};
     });
 
     Main.active = new Main.View();
+var SideBar = {};
+
+    SideBar.View = Backbone.View.extend({
+
+        el      : 'div#sidebar',
+        events  : {
+
+            'click li.index' : function() {
+                Router.active.changePage('start');
+            },
+
+            'click li.easysoap' : function() {
+                Router.active.changePage('easysoap');
+            }
+        }
+
+    });
+
+    SideBar.active = new SideBar.View();
 var Router = {};
 
     Router.App = Backbone.Router.extend({
@@ -14577,6 +14608,31 @@ var Router = {};
         Router.active = new Router.App();
         Backbone.history.start();
     });
+var Easysoap = {};
+
+    Easysoap.View = Backbone.View.extend({
+
+        el : '#main.easysoap',
+
+        initialize : function () {
+            this.render();
+        },
+
+        render : function() {
+
+            var that = this;
+            $.ajax({
+                url : 'https://api.github.com/repos/moszeed/easysoap/readme',
+                headers : {
+                    Accept : 'application/vnd.github.VERSION.raw'
+                },
+                success : function(data) {
+                    that.$el.find('#npm_description').html('<pre>' + data + '</pre>');
+                }
+            });
+        }
+
+    });
 var Start = {};
 
     Start.pageIndex = Backbone.View.extend({
@@ -14611,7 +14667,7 @@ var Start = {};
 
                         var li = [];
                         _.each(data, function(item, key) {
-                            li.push('<li class="' + item.name + '"><span class="create_date">' + item.create_date + '</span><span class="description">' + item.description + '</span></li>');
+                            li.push('<li class="' + item.name + '"><span class="create_date">' + unixToDate(item.create_date) + '</span><span class="description">' + item.description + '</span></li>');
                         });
 
                         $(that.$el).html('<ul>' + li.join('') + '</ul>');

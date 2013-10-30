@@ -22,15 +22,18 @@ menu, ul {
     top      : 0;
     bottom   : 0;
     left     : 0;
-    width    : 420px;
+    width    : 400px;
     background-color: #121212;
 }
 
 #main {
     position : absolute;
     top      : 0;
+    padding-left: 50px;
     padding-top : 50px;
-    left     : 450px;
+    border-left: 1px solid #A0A0A0;
+    box-shadow: inset 4px 0px 1px 0px #A0A0A0;
+    left     : 400px;
     right    : 0;
     bottom   : 0;
     overflow : auto;
@@ -72,13 +75,16 @@ menu, ul {
 
 
 
-
+#npm_description {
+    font-size : 1.4em;
+}
 
 
 
 #about,
 #gplus,
 #twitter,
+#main_menu,
 #lifestream {
     position : absolute;
     left     : 10px;
@@ -99,6 +105,38 @@ menu, ul {
     color   : #666666;
     top     : 10px;
     padding : 40px;
+    cursor: default;
+    h2 {
+        color : #999999;
+    }
+}
+
+#main_menu {
+
+    color   : #999999;
+    top     : 200px;
+    padding : 40px;
+
+    li {
+        font-size: 1.2em;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+
+        a:hover {
+            cursor: pointer;
+            color : #eeeeee;
+        }
+    }
+}
+
+#sub_menu {
+
+    margin-top: 5px;
+    margin-left: 10px;
+
+    li {
+        font-size: 0.8em;
+    }
 }
 
 #lifestream {

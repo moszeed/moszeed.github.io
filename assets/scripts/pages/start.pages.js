@@ -32,7 +32,7 @@ var Start = {};
 
                         var li = [];
                         _.each(data, function(item, key) {
-                            li.push('<li class="' + item.name + '"><span class="create_date">' + item.create_date + '</span><span class="description">' + item.description + '</span></li>');
+                            li.push('<li class="' + item.name + '"><span class="create_date">' + unixToDate(item.create_date) + '</span><span class="description">' + item.description + '</span></li>');
                         });
 
                         $(that.$el).html('<ul>' + li.join('') + '</ul>');
