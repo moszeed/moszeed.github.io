@@ -5,7 +5,7 @@ var Easysoap = {};
         el : '#main.easysoap',
 
         initialize : function () {
-            this.render();
+
         },
 
         render : function() {
