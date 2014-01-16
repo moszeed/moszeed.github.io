@@ -14553,6 +14553,10 @@ var SideBar = {};
 
             'click li.easysoap' : function() {
                 Router.active.changePage('easysoap');
+            },
+
+            'click li.backbone-dropbox' : function() {
+                Router.active.changePage('backbone_dropbox');
             }
         }
 
@@ -14615,7 +14619,7 @@ var Easysoap = {};
         el : '#main.easysoap',
 
         initialize : function () {
-
+            this.render();
         },
 
         render : function() {
@@ -14627,7 +14631,32 @@ var Easysoap = {};
                     Accept : 'application/vnd.github.VERSION.raw'
                 },
                 success : function(data) {
-                    that.$el.find('#npm_description').html('<pre>' + data + '</pre>');
+                    that.$el.find('#github_readme').html(data);
+                }
+            });
+        }
+
+    });
+var Backbone_dropbox = {};
+
+    Backbone_dropbox.View = Backbone.View.extend({
+
+        el : '#main.backbone_dropbox',
+
+        initialize : function () {
+            this.render();
+        },
+
+        render : function() {
+
+            var that = this;
+            $.ajax({
+                url : 'https://api.github.com/repos/jay-doubleyou/backbone-dropbox.js/readme',
+                headers : {
+                    Accept : 'application/vnd.github.VERSION.raw'
+                },
+                success : function(data) {
+                    that.$el.find('#github_readme').html(data);
                 }
             });
         }

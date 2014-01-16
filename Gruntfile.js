@@ -69,6 +69,7 @@ module.exports = function(grunt) {
                     'assets/scripts/modules/router.module.js',
 
                     'assets/scripts/pages/easysoap.pages.js',
+                    'assets/scripts/pages/backbone_dropbox.pages.js',
                     'assets/scripts/pages/start.pages.js'
                 ],
 

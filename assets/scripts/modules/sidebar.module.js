@@ -11,6 +11,10 @@ var SideBar = {};
 
             'click li.easysoap' : function() {
                 Router.active.changePage('easysoap');
+            },
+
+            'click li.backbone-dropbox' : function() {
+                Router.active.changePage('backbone_dropbox');
             }
         }
 

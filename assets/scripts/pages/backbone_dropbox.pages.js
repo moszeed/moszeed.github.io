@@ -1,8 +1,8 @@
-var Easysoap = {};
+var Backbone_dropbox = {};
 
-    Easysoap.View = Backbone.View.extend({
+    Backbone_dropbox.View = Backbone.View.extend({
 
-        el : '#main.easysoap',
+        el : '#main.backbone_dropbox',
 
         initialize : function () {
             this.render();
@@ -12,7 +12,7 @@ var Easysoap = {};
 
             var that = this;
             $.ajax({
-                url : 'https://api.github.com/repos/moszeed/easysoap/readme',
+                url : 'https://api.github.com/repos/jay-doubleyou/backbone-dropbox.js/readme',
                 headers : {
                     Accept : 'application/vnd.github.VERSION.raw'
                 },
