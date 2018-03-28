@@ -1,0 +1,31 @@
+{
+    "easysoap": {
+        "type"       : "github",
+        "name"       : "EasySoap",
+        "description": "a SOAP Client for Node.js",
+        "link"       : "https://github.com/moszeed/easysoap",
+        "readme"     : "https://api.github.com/repos/moszeed/easysoap/readme"
+    },
+    "kindleperiodical": {
+        "type"       : "github",
+        "name"       : "KindlePeriodical",
+        "description": "create a kindle periodical book with Node.js",
+        "link"       : "https://github.com/moszeed/kindle-periodical",
+        "readme"     : "https://api.github.com/repos/moszeed/kindle-periodical/readme"
+    },
+    "incrementallify": {
+        "type"       : "github",
+        "name"       : "Incrementallify",
+        "description": "browserify builds with a persistent cache between runtimes",
+        "link"       : "https://github.com/moszeed/incrementallify",
+        "readme"     : "https://api.github.com/repos/moszeed/incrementallify/readme"
+    },
+    "wsdlrdr": {
+        "type"       : "github",
+        "name"       : "wsdlrdr",
+        "description": "a simple wsdl parser ",
+        "link"       : "https://github.com/moszeed/wsdlrdr",
+        "readme"     : "https://api.github.com/repos/moszeed/wsdlrdr/readme"
+    }
+}
+

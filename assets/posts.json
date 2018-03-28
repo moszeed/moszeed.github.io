@@ -1,0 +1,37 @@
+{
+    "jsconfeu2013recap": {
+        "type"       : "blog",
+        "name"       : "JSConf EU 2013",
+        "created"    : "18. August 2013",
+        "description": "a collection of videos from jsconfeu 2013",
+        "link"       : "./assets/blog/jsconfeu2013recap.md"
+    },
+    "rejectjs2013recap": {
+        "type"       : "blog",
+        "name"       : "Reject.js 2013",
+        "created"    : "18. August 2013",
+        "description": "a collection of videos from rejectjs 2013",
+        "link"       : "./assets/blog/rejectjs2013recap.md"
+    },
+    "npmasbuildtool": {
+        "type"       : "blog",
+        "name"       : "NPM Scripts (German)",
+        "created"    : "29. Mai 2016",
+        "description": "how to use the \"scripts\" in npm",
+        "link"       : "./assets/blog/npmasbuildtool.md"
+    },
+    "practicalphparrayfunctions": {
+        "type"       : "blog",
+        "name"       : "Practical PHP Array Functions (German)",
+        "created"    : "03. August 2016",
+        "description": "some dev-life saving PHP Array functions",
+        "link"       : "./assets/blog/practicalphparrayfunctions.md"
+    },
+    "unityressources": {
+        "type"       : "blog",
+        "name"       : "Unity Ressources",
+        "created"    : "28. März 2018",
+        "description": "ressources like models, animations, textures ...",
+        "link"       : "./assets/blog/unityressources.md"
+    }
+}

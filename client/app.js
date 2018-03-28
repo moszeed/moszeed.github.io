@@ -2,72 +2,9 @@
     'use strict';
 
     const html = require('choo/html');
-    const devtools = require('choo-devtools');
     const css = require('sheetify');
     const choo = require('choo');
     const markdown = require('markdown-it')();
-
-    const posts = {
-        'jsconfeu2013recap': {
-            'type'       : 'blog',
-            'name'       : 'JSConf EU 2013',
-            'created'    : '18. August 2013',
-            'description': 'a collection of videos from jsconfeu 2013',
-            'link'       : './assets/blog/jsconfeu2013recap.md'
-        },
-        'rejectjs2013recap': {
-            'type'       : 'blog',
-            'name'       : 'Reject.js 2013',
-            'created'    : '18. August 2013',
-            'description': 'a collection of videos from rejectjs 2013',
-            'link'       : './assets/blog/rejectjs2013recap.md'
-        },
-        'npmasbuildtool': {
-            'type'       : 'blog',
-            'name'       : 'NPM Scripts (German)',
-            'created'    : '29. Mai 2016',
-            'description': 'how to use the "scripts" in npm',
-            'link'       : './assets/blog/npmasbuildtool.md'
-        },
-        'practicalphparrayfunctions': {
-            'type'       : 'blog',
-            'name'       : 'Practical PHP Array Functions (German)',
-            'created'    : '03. August 2016',
-            'description': 'some dev-life saving PHP Array functions',
-            'link'       : './assets/blog/practicalphparrayfunctions.md'
-        },
-        'unityressources': {
-            'type'       : 'blog',
-            'name'       : 'Unity Ressources',
-            'created'    : '28. März 2018',
-            'description': 'ressources like models, animations, textures ...',
-            'link'       : './assets/blog/unityressources.md'
-        }
-    };
-
-    const pages = {
-        'easysoap': {
-            'type'       : 'github',
-            'name'       : 'EasySoap',
-            'description': 'a SOAP Client for Node.js',
-            'link'       : 'https://github.com/moszeed/easysoap',
-            'readme'     : 'https://api.github.com/repos/moszeed/easysoap/readme'
-        },
-        'kindleperiodical': {
-            'type'       : 'github',
-            'name'       : 'KindlePeriodical',
-            'description': 'create a kindle periodical book with Node.js',
-            'link'       : 'https://github.com/moszeed/kindle-periodical',
-            'readme'     : 'https://api.github.com/repos/moszeed/kindle-periodical/readme'
-        },
-        'incrementallify': {
-            'type'       : 'github',
-            'name'       : 'Incrementallify',
-            'description': 'browserify builds with a persistent cache between runtimes',
-            'link'       : 'https://github.com/moszeed/incrementallify',
-            'readme'     : 'https://api.github.com/repos/moszeed/incrementallify/readme'
-        }
-    };
 
     const body = css`
         :host {
@@ -111,10 +48,13 @@
             font-weight: bold;
             width: 140px;
             display: inline-block;
+            padding: 8px;
+            background-color: #DEDEDE;
         }
 
         ul li span.name {
             margin-left: 20px;
+            font-weight: bold;
         }
 
         ul li span.description {
@@ -132,8 +72,9 @@
 
         nav ul li {
             color: #EFEFEF;
-            margin-bottom: 4px;
             text-transform: lowercase;
+            margin-bottom: 8px;
+            margin-top: 8px;
         }
 
         section ul li {
@@ -168,17 +109,27 @@
 
         main {
             background-color: #FEFEFE;
-            padding: 10px 20px;
+            padding: 10px 30px;
             overflow: auto;
             box-shadow: 4px 0px 6px inset #333333;
         }
     `;
 
     const app = choo();
-    // app.use(devtools());
-    app.use((state, emit) => {
+    app.use((state, emitter) => {
         state.openPage = null;
         state.openPageData = null;
+        state.pages = null;
+        state.posts = null;
+
+        Promise.all([
+            getConfig('./assets/posts.json'),
+            getConfig('./assets/pages.json')
+        ]).then((data) => {
+            state.posts = data[0];
+            state.pages = data[1];
+            emitter.emit('render');
+        });
     });
     app.route('/', mainView);
     app.route('#impressum', impressumView);
@@ -194,6 +145,10 @@
             }
         };
         return fetch(path, fetchParams).then((response) => response.text());
+    }
+
+    function getConfig(path) {
+        return fetch(path).then((response) => response.json());
     }
 
     function getBlogPost (path) {
@@ -212,7 +167,14 @@
     }
 
     function githubProjectView (state, emit) {
-        let pageItem = pages[state.params.page];
+        if (!state.pages) {
+            return html`<body class=${body}>
+                ${navigationView(state, emit)}
+                <main class="blog"></main>
+            </body>`;
+        }
+
+        let pageItem = state.pages[state.params.page];
         let $externalContent = html`<div></div>`;
 
         if (state.openPage !== state.params.page) {
@@ -231,12 +193,25 @@
 
         return html`<body class=${body}>
             ${navigationView(state, emit)}
-            <main class="blog">${$externalContent}</main>
+            <main class="blog">
+                <section>
+                    open on Github: <a href="${pageItem.link}" target="_blank">${pageItem.link}</a>
+                </section>
+                <hr>
+                <section>${$externalContent}</section>
+            </main>
         </body>`;
     }
 
     function blogPostView (state, emit) {
-        let postItem = posts[state.params.post];
+        if (!state.posts) {
+            return html`<body class=${body}>
+                ${navigationView(state, emit)}
+                <main class="blog"></main>
+            </body>`;
+        }
+
+        let postItem = state.posts[state.params.post];
         let $externalContent = html`<div></div>`;
 
         if (state.openPage !== state.params.post) {
@@ -260,25 +235,35 @@
     }
 
     function navigationView (state, emit) {
-        const $liArray = Object.keys(pages)
-            .map((key) => html`<li onclick=${() => setOpenPage(key)}>.${pages[key].name}</li>`)
-            .filter(Boolean);
+        let $projectList = '';
 
-        return html`<nav>
+        if (state.pages) {
+            const $liArray = Object.keys(state.pages)
+                .map((key) => html`<li onclick=${() => setOpenPage(key)}>.${state.pages[key].name}</li>`)
+                .filter(Boolean);
+
+            $projectList = html`<section>
+                <h4>.pages</h4>
+                <ul class="project">
+                    ${$liArray}
+                </ul>
+            </section>`;
+        }
+
+        const $navigation = html`<nav>
             <h3>.about</h3>
             <p>Hi and welcome, i am Moszeed, from Germany. I love to write Code, to create Apps, Pages and Modules.</p>
             <hr><br>
             <ul>
                 <li onclick=${backToList}>.index</li>
             </ul>
-            <h4>.pages</h4>
-            <ul class="project">
-                ${$liArray}
-            </ul>
+            ${$projectList}
             <div id="impressum">
                 <a href="#impressum">Impressum</a>
             </div>
         </nav>`;
+
+        return $navigation;
 
         function backToList () {
             emit('pushState', `/`);
@@ -290,13 +275,17 @@
     }
 
     function blogPostsListView (state, emit) {
-        const $liArray = Object.keys(posts)
+        if (!state.posts) {
+            return '';
+        }
+
+        const $liArray = Object.keys(state.posts)
             .reverse()
             .map((key) => html`
                 <li onclick=${() => setOpenPage(key)}>
-                    <span class="created">${posts[key].created}</span>
-                    <span class="name">${posts[key].name}</span>
-                    <span class="description">${posts[key].description}</span>
+                    <span class="created">${state.posts[key].created}</span>
+                    <span class="name">${state.posts[key].name}</span>
+                    <span class="description">${state.posts[key].description}</span>
                 </li>`)
             .filter(Boolean);
 
