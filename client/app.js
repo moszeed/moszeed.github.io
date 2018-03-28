@@ -52,12 +52,12 @@
             background-color: #DEDEDE;
         }
 
-        ul li span.name {
+        ul li div.name {
             margin-left: 20px;
             font-weight: bold;
         }
 
-        ul li span.description {
+        ul li div.description {
             font-size: 90%;
             margin-left: 20px;
         }
@@ -77,13 +77,15 @@
             margin-top: 8px;
         }
 
-        section ul li {
-            margin-bottom: 6px;
+        main section ul li {
+            margin-bottom: 16px;
+            display: grid;
+            grid-template-columns: 150px auto;
         }
 
-        section ul li:hover {
+        main section ul li:hover {
             cursor: pointer;
-            text-decoration: underline;
+            background-color: #D4D4D4;
         }
 
         nav ul li.firstItem {
@@ -284,8 +286,10 @@
             .map((key) => html`
                 <li onclick=${() => setOpenPage(key)}>
                     <span class="created">${state.posts[key].created}</span>
-                    <span class="name">${state.posts[key].name}</span>
-                    <span class="description">${state.posts[key].description}</span>
+                    <span>
+                        <div class="name">${state.posts[key].name}</div>
+                        <div class="description">${state.posts[key].description}</div>
+                    </span>
                 </li>`)
             .filter(Boolean);
 
