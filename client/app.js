@@ -22,6 +22,20 @@
             'description': 'a collection of videos from rejectjs 2013',
             'link'       : './assets/blog/rejectjs2013recap.md'
         },
+        'npmasbuildtool': {
+            'type'       : 'blog',
+            'name'       : 'NPM Scripts (German)',
+            'created'    : '29. Mai 2016',
+            'description': 'how to use the "scripts" in npm',
+            'link'       : './assets/blog/npmasbuildtool.md'
+        },
+        'practicalphparrayfunctions': {
+            'type'       : 'blog',
+            'name'       : 'Practical PHP Array Functions (German)',
+            'created'    : '03. August 2016',
+            'description': 'some dev-life saving PHP Array functions',
+            'link'       : './assets/blog/practicalphparrayfunctions.md'
+        },
         'unityressources': {
             'type'       : 'blog',
             'name'       : 'Unity Ressources',
@@ -161,7 +175,7 @@
     `;
 
     const app = choo();
-    app.use(devtools());
+    // app.use(devtools());
     app.use((state, emit) => {
         state.openPage = null;
         state.openPageData = null;
@@ -294,7 +308,6 @@
     }
 
     function mainView (state, emit) {
-
         return html`<body class=${body}>
             ${navigationView(state, emit)}
             <main>

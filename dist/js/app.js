@@ -23,6 +23,20 @@
             'description': 'a collection of videos from rejectjs 2013',
             'link': './assets/blog/rejectjs2013recap.md'
         },
+        'npmasbuildtool': {
+            'type': 'blog',
+            'name': 'NPM Scripts (German)',
+            'created': '29. Mai 2016',
+            'description': 'how to use the "scripts" in npm',
+            'link': './assets/blog/npmasbuildtool.md'
+        },
+        'practicalphparrayfunctions': {
+            'type': 'blog',
+            'name': 'Practical PHP Array Functions (German)',
+            'created': '03. August 2016',
+            'description': 'some dev-life saving PHP Array functions',
+            'link': './assets/blog/practicalphparrayfunctions.md'
+        },
         'unityressources': {
             'type': 'blog',
             'name': 'Unity Ressources',
@@ -59,7 +73,7 @@
     var body = (require('sheetify/insert')("._84e2a931 {\n            display: grid;\n            grid-template-columns: 200px auto;\n            grid-template-rows: auto;\n        }\n\n        html, body {\n            padding: 0;\n            margin: 0;\n            width: 100%;\n            height: 100%;\n            overflow: hidden;\n            font-size: 1em;\n            font-family: Helvetica, Arial, FreeSans, sans-serif;\n        }\n\n        nav {\n            color: #EFEFEF;\n            background-color: #121212;\n            padding: 10px;\n        }\n\n        nav p {\n            letter-spacing: 1px;\n            font-size: 80%;\n        }\n\n        nav h4 {\n            margin-bottom: 4px;\n        }\n\n        ul {\n            list-style: none;\n            padding: 0;\n            margin: 0;\n        }\n\n        ul li span.created {\n            font-weight: bold;\n            width: 140px;\n            display: inline-block;\n        }\n\n        ul li span.name {\n            margin-left: 20px;\n        }\n\n        ul li span.description {\n            font-size: 90%;\n            margin-left: 20px;\n        }\n\n        nav ul.project {\n            margin-left: 10px;\n        }\n\n        nav hr {\n            border: 1px solid #363636;\n        }\n\n        nav ul li {\n            color: #EFEFEF;\n            margin-bottom: 4px;\n            text-transform: lowercase;\n        }\n\n        section ul li {\n            margin-bottom: 6px;\n        }\n\n        section ul li:hover {\n            cursor: pointer;\n            text-decoration: underline;\n        }\n\n        nav ul li.firstItem {\n            margin-bottom: 8px;\n        }\n\n        nav ul li:hover {\n            cursor: pointer;\n            text-decoration: underline;\n        }\n\n        #impressum {\n            position: absolute;\n            left: 20px;\n            bottom: 10px;\n        }\n\n        #impressum a {\n            color: #626262;\n            font-size: 12px;\n            text-decoration: none;\n        }\n\n        main {\n            background-color: #FEFEFE;\n            padding: 10px 20px;\n            overflow: auto;\n            box-shadow: 4px 0px 6px inset #333333;\n        }") || true) && "_84e2a931";
 
     var app = choo();
-    app.use(devtools());
+    // app.use(devtools());
     app.use(function (state, emit) {
         state.openPage = null;
         state.openPageData = null;
@@ -261,7 +275,6 @@
     }
 
     function mainView(state, emit) {
-
         return function () {
             var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
             var bel3 = document.createElement("body");
