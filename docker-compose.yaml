@@ -1,0 +1,16 @@
+dev:
+    build: .
+    dockerfile: Dockerfile
+    restart: always
+    container_name: moszeed-page
+    hostname: Mosiworkstation-docker
+    ports:
+    - "9090:9090"
+    volumes:
+    - ./bin:/moszeed-page/bin
+    - ./client:/moszeed-page/client
+    - ./dist:/moszeed-page/dist
+    - ./assets:/moszeed-page/assets
+    - ./package.json:/moszeed-page/package.json
+    - ./.babelrc:/moszeed-page/.babelrc
+    - ./index.html:/moszeed-page/index.html

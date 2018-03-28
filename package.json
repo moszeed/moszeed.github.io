@@ -1,22 +1,49 @@
 {
-    "name"              : "moszeed-github",
-    "description"       : "my github page",
-    "author"            : {
-        "name"  : "Michael Röber",
-        "email" : "moszeed@gmail.com"
+    "name": "moszeed-github",
+    "description": "my github page",
+    "author": {
+        "name": "Michael Röber",
+        "email": "moszeed@gmail.com"
     },
-
-    "version"   : "0.0.1",
-    "main"      : "./index",
-
+    "scripts": {
+        "serve": "npm run watch | npm run http",
+        "watch": "sh ./bin/watch-js.sh",
+        "http" : "http-server -p 9090"
+    },
+    "version": "0.1.0",
     "devDependencies": {
+        "http-server"  : "latest",
+        "choo"         : "latest",
+        "choo-devtools": "latest",
+        "markdown-it"  : "latest",
+        "sheetify"     : "latest",
 
-        "grunt"                 : ">=0.4.1",
-        "grunt-contrib-watch"   : ">=0.5.3",
-        "grunt-contrib-less"    : ">=0.7.0",
-        "grunt-contrib-concat"  : ">=0.3.0",
-        "grunt-contrib-uglify"  : ">=0.2.2",
-        "grunt-contrib-copy"    : ">=0.4.1",
-        "grunt-contrib-clean"   : ">=0.5.0"
+        "browserify"         : "latest",
+        "browserify-markdown": "latest",
+
+        "watchify": "latest",
+        "yo-yoify": "latest",
+
+        "uglify-js": "latest",
+
+        "less"                  : "latest",
+        "less-plugin-autoprefix": "latest",
+
+        "clean-css-cli": "latest",
+        "clean-css"    : "latest",
+
+        "babel-core"                           : "latest",
+        "babel-plugin-transform-builtin-extend": "latest",
+        "babel-polyfill"                       : "latest",
+        "babel-preset-env"                     : "latest",
+        "babel-preset-es2015"                  : "latest",
+        "babelify"                             : "latest",
+
+        "eslint": "latest",
+        "eslint-config-standard": "latest",
+        "eslint-plugin-import": "latest",
+        "eslint-plugin-node": "latest",
+        "eslint-plugin-promise": "latest",
+        "eslint-plugin-standard": "latest"
     }
 }
