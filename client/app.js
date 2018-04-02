@@ -78,9 +78,14 @@
         }
 
         main section ul li {
-            margin-bottom: 16px;
             display: grid;
             grid-template-columns: 150px auto;
+            margin-bottom: 8px;
+        }
+
+        main section ul li span {
+            padding-top: 10px;
+            padding-bottom: 20px;
         }
 
         main section ul li:hover {
@@ -114,6 +119,8 @@
             padding: 10px 30px;
             overflow: auto;
             box-shadow: 4px 0px 6px inset #333333;
+            display: grid;
+            grid-template-columns: auto 400px;
         }
     `;
 
@@ -307,6 +314,11 @@
                 <section>
                     <h3>Posts</h3>
                     ${blogPostsListView(state, emit)}
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <a data-pin-do="embedUser" data-pin-board-width="380" data-pin-scale-height="600" data-pin-scale-width="115" href="https://www.pinterest.com/moszeed/"></a>
+                    <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
                 </section>
             </main>
         </body>`;

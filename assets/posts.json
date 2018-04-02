@@ -33,5 +33,12 @@
         "created"    : "28. März 2018",
         "description": "ressources like models, animations, textures ...",
         "link"       : "./assets/blog/unityressources.md"
+    },
+    "unityscripts": {
+        "type"       : "blog",
+        "name"       : "Unity Scripts",
+        "created"    : "02. April 2018",
+        "description": "unity scripts...",
+        "link"       : "./assets/blog/unityscripts.md"
     }
 }
