@@ -48,7 +48,7 @@
             font-weight: bold;
             width: 140px;
             display: inline-block;
-            padding: 8px;
+            padding: 10px;
             background-color: #DEDEDE;
         }
 
@@ -79,13 +79,8 @@
 
         main section ul li {
             display: grid;
-            grid-template-columns: 150px auto;
+            grid-template-columns: 170px auto;
             margin-bottom: 8px;
-        }
-
-        main section ul li span {
-            padding-top: 10px;
-            padding-bottom: 20px;
         }
 
         main section ul li:hover {
@@ -114,6 +109,23 @@
             text-decoration: none;
         }
 
+        pre {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-left: 3px solid #f36d33;
+            color: #666;
+            page-break-inside: avoid;
+            font-family: monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 1.6em;
+            max-width: 100%;
+            overflow: auto;
+            padding: 1em 1.5em;
+            display: block;
+            word-wrap: break-word;
+        }
+
         main {
             background-color: #FEFEFE;
             padding: 10px 30px;
@@ -121,6 +133,22 @@
             box-shadow: 4px 0px 6px inset #333333;
             display: grid;
             grid-template-columns: auto 400px;
+            grid-template-rows: auto;
+            overflow: hidden;
+        }
+
+        main section {
+            overflow: auto;
+            padding: 10px;
+        }
+
+        main.blog {
+            display: block;
+        }
+
+        main.blog section.external {
+            background-color: #FBFBFB;
+            padding: 20px;
         }
     `;
 
@@ -207,7 +235,7 @@
                     open on Github: <a href="${pageItem.link}" target="_blank">${pageItem.link}</a>
                 </section>
                 <hr>
-                <section>${$externalContent}</section>
+                <section class="external">${$externalContent}</section>
             </main>
         </body>`;
     }
@@ -287,20 +315,37 @@
         if (!state.posts) {
             return '';
         }
+        const reversedPostsKeys = Object.keys(state.posts).reverse();
+        const $liGroups = reversedPostsKeys.reduce((store, key) => {
+            let postItem = state.posts[key];
+            if (postItem) {
+                if (!postItem.subtype) postItem.subtype = 'default';
+                if (!store[postItem.subtype]) store[postItem.subtype] = [];
 
-        const $liArray = Object.keys(state.posts)
-            .reverse()
-            .map((key) => html`
+                let $li = html`
                 <li onclick=${() => setOpenPage(key)}>
-                    <span class="created">${state.posts[key].created}</span>
+                    <span class="created">${postItem.created}</span>
                     <span>
-                        <div class="name">${state.posts[key].name}</div>
-                        <div class="description">${state.posts[key].description}</div>
+                        <div class="name">${postItem.name}</div>
+                        <div class="description">${postItem.description}</div>
                     </span>
-                </li>`)
-            .filter(Boolean);
+                </li>`;
 
-        return html`<ul>${$liArray}</ul>`;
+                store[postItem.subtype].push($li);
+            }
+
+            return store;
+        }, {});
+
+        return html`<div>
+            <ul>${$liGroups.default}</ul>
+            <hr>
+            <h5>PHP</h5>
+            <ul>${$liGroups.php}</ul>
+            <hr>
+            <h5>Unity 3D</h5>
+            <ul>${$liGroups.unity}</ul>
+        </div>`;
 
         function setOpenPage (key) {
             emit('pushState', `#blog/${key}`);
@@ -308,6 +353,15 @@
     }
 
     function mainView (state, emit) {
+        const $social = html`<section>
+            <h3>Social</h3>
+            <h5>YouTube Likes</h5>
+            <iframe width="370" height="300" src="https://www.youtube.com/embed/videoseries?list=LLIP3PUKG7eeAkbf8Rwbhz8g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <h5>Pinterest Likes</h5>
+            <a data-pin-do="embedUser" data-pin-board-width="350" data-pin-scale-height="400" data-pin-scale-width="115" href="https://www.pinterest.com/moszeed/"></a>
+            <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+        </section>`;
+
         return html`<body class=${body}>
             ${navigationView(state, emit)}
             <main>
@@ -315,11 +369,7 @@
                     <h3>Posts</h3>
                     ${blogPostsListView(state, emit)}
                 </section>
-                <section>
-                    <h3>Social</h3>
-                    <a data-pin-do="embedUser" data-pin-board-width="380" data-pin-scale-height="600" data-pin-scale-width="115" href="https://www.pinterest.com/moszeed/"></a>
-                    <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
-                </section>
+                ${$social}
             </main>
         </body>`;
     }

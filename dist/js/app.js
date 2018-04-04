@@ -7,7 +7,7 @@
     var choo = require('choo');
     var markdown = require('markdown-it')();
 
-    var body = (require('sheetify/insert')("._cadfb64b {\n            display: grid;\n            grid-template-columns: 200px auto;\n            grid-template-rows: auto;\n        }\n\n        html, body {\n            padding: 0;\n            margin: 0;\n            width: 100%;\n            height: 100%;\n            overflow: hidden;\n            font-size: 1em;\n            font-family: Helvetica, Arial, FreeSans, sans-serif;\n        }\n\n        nav {\n            color: #EFEFEF;\n            background-color: #121212;\n            padding: 10px;\n        }\n\n        nav p {\n            letter-spacing: 1px;\n            font-size: 80%;\n        }\n\n        nav h4 {\n            margin-bottom: 4px;\n        }\n\n        ul {\n            list-style: none;\n            padding: 0;\n            margin: 0;\n        }\n\n        ul li span.created {\n            font-weight: bold;\n            width: 140px;\n            display: inline-block;\n            padding: 8px;\n            background-color: #DEDEDE;\n        }\n\n        ul li div.name {\n            margin-left: 20px;\n            font-weight: bold;\n        }\n\n        ul li div.description {\n            font-size: 90%;\n            margin-left: 20px;\n        }\n\n        nav ul.project {\n            margin-left: 10px;\n        }\n\n        nav hr {\n            border: 1px solid #363636;\n        }\n\n        nav ul li {\n            color: #EFEFEF;\n            text-transform: lowercase;\n            margin-bottom: 8px;\n            margin-top: 8px;\n        }\n\n        main section ul li {\n            display: grid;\n            grid-template-columns: 150px auto;\n            margin-bottom: 8px;\n        }\n\n        main section ul li span {\n            padding-top: 10px;\n            padding-bottom: 20px;\n        }\n\n        main section ul li:hover {\n            cursor: pointer;\n            background-color: #D4D4D4;\n        }\n\n        nav ul li.firstItem {\n            margin-bottom: 8px;\n        }\n\n        nav ul li:hover {\n            cursor: pointer;\n            text-decoration: underline;\n        }\n\n        #impressum {\n            position: absolute;\n            left: 20px;\n            bottom: 10px;\n        }\n\n        #impressum a {\n            color: #626262;\n            font-size: 12px;\n            text-decoration: none;\n        }\n\n        main {\n            background-color: #FEFEFE;\n            padding: 10px 30px;\n            overflow: auto;\n            box-shadow: 4px 0px 6px inset #333333;\n            display: grid;\n            grid-template-columns: auto 400px;\n        }") || true) && "_cadfb64b";
+    var body = (require('sheetify/insert')("._4c37591b {\n            display: grid;\n            grid-template-columns: 200px auto;\n            grid-template-rows: auto;\n        }\n\n        html, body {\n            padding: 0;\n            margin: 0;\n            width: 100%;\n            height: 100%;\n            overflow: hidden;\n            font-size: 1em;\n            font-family: Helvetica, Arial, FreeSans, sans-serif;\n        }\n\n        nav {\n            color: #EFEFEF;\n            background-color: #121212;\n            padding: 10px;\n        }\n\n        nav p {\n            letter-spacing: 1px;\n            font-size: 80%;\n        }\n\n        nav h4 {\n            margin-bottom: 4px;\n        }\n\n        ul {\n            list-style: none;\n            padding: 0;\n            margin: 0;\n        }\n\n        ul li span.created {\n            font-weight: bold;\n            width: 140px;\n            display: inline-block;\n            padding: 10px;\n            background-color: #DEDEDE;\n        }\n\n        ul li div.name {\n            margin-left: 20px;\n            font-weight: bold;\n        }\n\n        ul li div.description {\n            font-size: 90%;\n            margin-left: 20px;\n        }\n\n        nav ul.project {\n            margin-left: 10px;\n        }\n\n        nav hr {\n            border: 1px solid #363636;\n        }\n\n        nav ul li {\n            color: #EFEFEF;\n            text-transform: lowercase;\n            margin-bottom: 8px;\n            margin-top: 8px;\n        }\n\n        main section ul li {\n            display: grid;\n            grid-template-columns: 170px auto;\n            margin-bottom: 8px;\n        }\n\n        main section ul li:hover {\n            cursor: pointer;\n            background-color: #D4D4D4;\n        }\n\n        nav ul li.firstItem {\n            margin-bottom: 8px;\n        }\n\n        nav ul li:hover {\n            cursor: pointer;\n            text-decoration: underline;\n        }\n\n        #impressum {\n            position: absolute;\n            left: 20px;\n            bottom: 10px;\n        }\n\n        #impressum a {\n            color: #626262;\n            font-size: 12px;\n            text-decoration: none;\n        }\n\n        pre {\n            background: #f4f4f4;\n            border: 1px solid #ddd;\n            border-left: 3px solid #f36d33;\n            color: #666;\n            page-break-inside: avoid;\n            font-family: monospace;\n            font-size: 15px;\n            line-height: 1.6;\n            margin-bottom: 1.6em;\n            max-width: 100%;\n            overflow: auto;\n            padding: 1em 1.5em;\n            display: block;\n            word-wrap: break-word;\n        }\n\n        main {\n            background-color: #FEFEFE;\n            padding: 10px 30px;\n            overflow: auto;\n            box-shadow: 4px 0px 6px inset #333333;\n            display: grid;\n            grid-template-columns: auto 400px;\n            grid-template-rows: auto;\n            overflow: hidden;\n        }\n\n        main section {\n            overflow: auto;\n            padding: 10px;\n        }\n\n        main.blog {\n            display: block;\n        }\n\n        main.blog section.external {\n            background-color: #FBFBFB;\n            padding: 20px;\n        }") || true) && "_4c37591b";
 
     var app = choo();
     app.use(function (state, emitter) {
@@ -120,6 +120,7 @@
             ac(bel1, ["\n                    open on Github: ", bel0, "\n                "]);
             var bel2 = document.createElement("hr");
             var bel3 = document.createElement("section");
+            bel3.setAttribute("class", "external");
             ac(bel3, [arguments[2]]);
             ac(bel4, ["\n                ", bel1, "\n                ", bel2, "\n                ", bel3, "\n            "]);
             ac(bel5, ["\n            ", arguments[4], "\n            ", bel4, "\n        "]);
@@ -240,36 +241,58 @@
         if (!state.posts) {
             return '';
         }
+        var reversedPostsKeys = Object.keys(state.posts).reverse();
+        var $liGroups = reversedPostsKeys.reduce(function (store, key) {
+            var postItem = state.posts[key];
+            if (postItem) {
+                if (!postItem.subtype) postItem.subtype = 'default';
+                if (!store[postItem.subtype]) store[postItem.subtype] = [];
 
-        var $liArray = Object.keys(state.posts).reverse().map(function (key) {
-            return function () {
-                var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
-                var bel4 = document.createElement("li");
-                bel4["onclick"] = arguments[3];
-                var bel0 = document.createElement("span");
-                bel0.setAttribute("class", "created");
-                ac(bel0, [arguments[0]]);
-                var bel3 = document.createElement("span");
-                var bel1 = document.createElement("div");
-                bel1.setAttribute("class", "name");
-                ac(bel1, [arguments[1]]);
-                var bel2 = document.createElement("div");
-                bel2.setAttribute("class", "description");
-                ac(bel2, [arguments[2]]);
-                ac(bel3, ["\n                        ", bel1, "\n                        ", bel2, "\n                    "]);
-                ac(bel4, ["\n                    ", bel0, "\n                    ", bel3, "\n                "]);
-                return bel4;
-            }(state.posts[key].created, state.posts[key].name, state.posts[key].description, function () {
-                return setOpenPage(key);
-            });
-        }).filter(Boolean);
+                var $li = function () {
+                    var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
+                    var bel4 = document.createElement("li");
+                    bel4["onclick"] = arguments[3];
+                    var bel0 = document.createElement("span");
+                    bel0.setAttribute("class", "created");
+                    ac(bel0, [arguments[0]]);
+                    var bel3 = document.createElement("span");
+                    var bel1 = document.createElement("div");
+                    bel1.setAttribute("class", "name");
+                    ac(bel1, [arguments[1]]);
+                    var bel2 = document.createElement("div");
+                    bel2.setAttribute("class", "description");
+                    ac(bel2, [arguments[2]]);
+                    ac(bel3, ["\n                        ", bel1, "\n                        ", bel2, "\n                    "]);
+                    ac(bel4, ["\n                    ", bel0, "\n                    ", bel3, "\n                "]);
+                    return bel4;
+                }(postItem.created, postItem.name, postItem.description, function () {
+                    return setOpenPage(key);
+                });
+
+                store[postItem.subtype].push($li);
+            }
+
+            return store;
+        }, {});
 
         return function () {
             var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
+            var bel7 = document.createElement("div");
             var bel0 = document.createElement("ul");
             ac(bel0, [arguments[0]]);
-            return bel0;
-        }($liArray);
+            var bel1 = document.createElement("hr");
+            var bel2 = document.createElement("h5");
+            ac(bel2, ["PHP"]);
+            var bel3 = document.createElement("ul");
+            ac(bel3, [arguments[1]]);
+            var bel4 = document.createElement("hr");
+            var bel5 = document.createElement("h5");
+            ac(bel5, ["Unity 3D"]);
+            var bel6 = document.createElement("ul");
+            ac(bel6, [arguments[2]]);
+            ac(bel7, ["\n            ", bel0, "\n            ", bel1, "\n            ", bel2, "\n            ", bel3, "\n            ", bel4, "\n            ", bel5, "\n            ", bel6, "\n        "]);
+            return bel7;
+        }($liGroups.default, $liGroups.php, $liGroups.unity);
 
         function setOpenPage(key) {
             emit('pushState', '#blog/' + key);
@@ -277,33 +300,49 @@
     }
 
     function mainView(state, emit) {
+        var $social = function () {
+            var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
+            var bel6 = document.createElement("section");
+            var bel0 = document.createElement("h3");
+            ac(bel0, ["Social"]);
+            var bel1 = document.createElement("h5");
+            ac(bel1, ["YouTube Likes"]);
+            var bel2 = document.createElement("iframe");
+            bel2.setAttribute("width", "370");
+            bel2.setAttribute("height", "300");
+            bel2.setAttribute("src", "https://www.youtube.com/embed/videoseries?list=LLIP3PUKG7eeAkbf8Rwbhz8g");
+            bel2.setAttribute("frameborder", "0");
+            bel2.setAttribute("allow", "autoplay; encrypted-media");
+            bel2.setAttribute("allowfullscreen", "allowfullscreen");
+            var bel3 = document.createElement("h5");
+            ac(bel3, ["Pinterest Likes"]);
+            var bel4 = document.createElement("a");
+            bel4.setAttribute("data-pin-do", "embedUser");
+            bel4.setAttribute("data-pin-board-width", "350");
+            bel4.setAttribute("data-pin-scale-height", "400");
+            bel4.setAttribute("data-pin-scale-width", "115");
+            bel4.setAttribute("href", "https://www.pinterest.com/moszeed/");
+            var bel5 = document.createElement("script");
+            bel5.setAttribute("async", "async");
+            bel5.setAttribute("defer", "defer");
+            bel5.setAttribute("src", "//assets.pinterest.com/js/pinit.js");
+            ac(bel6, ["\n            ", bel0, "\n            ", bel1, "\n            ", bel2, "\n            ", bel3, "\n            ", bel4, "\n            ", bel5, "\n        "]);
+            return bel6;
+        }();
+
         return function () {
             var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
-            var bel7 = document.createElement("body");
-            bel7.setAttribute("class", arguments[1]);
-            var bel6 = document.createElement("main");
+            var bel3 = document.createElement("body");
+            bel3.setAttribute("class", arguments[2]);
+            var bel2 = document.createElement("main");
             var bel1 = document.createElement("section");
             var bel0 = document.createElement("h3");
             ac(bel0, ["Posts"]);
             ac(bel1, ["\n                    ", bel0, "\n                    ", arguments[0], "\n                "]);
-            var bel5 = document.createElement("section");
-            var bel2 = document.createElement("h3");
-            ac(bel2, ["Social"]);
-            var bel3 = document.createElement("a");
-            bel3.setAttribute("data-pin-do", "embedUser");
-            bel3.setAttribute("data-pin-board-width", "380");
-            bel3.setAttribute("data-pin-scale-height", "600");
-            bel3.setAttribute("data-pin-scale-width", "115");
-            bel3.setAttribute("href", "https://www.pinterest.com/moszeed/");
-            var bel4 = document.createElement("script");
-            bel4.setAttribute("async", "async");
-            bel4.setAttribute("defer", "defer");
-            bel4.setAttribute("src", "//assets.pinterest.com/js/pinit.js");
-            ac(bel5, ["\n                    ", bel2, "\n                    ", bel3, "\n                    ", bel4, "\n                "]);
-            ac(bel6, ["\n                ", bel1, "\n                ", bel5, "\n            "]);
-            ac(bel7, ["\n            ", arguments[2], "\n            ", bel6, "\n        "]);
-            return bel7;
-        }(blogPostsListView(state, emit), body, navigationView(state, emit));
+            ac(bel2, ["\n                ", bel1, "\n                ", arguments[1], "\n            "]);
+            ac(bel3, ["\n            ", arguments[3], "\n            ", bel2, "\n        "]);
+            return bel3;
+        }(blogPostsListView(state, emit), $social, body, navigationView(state, emit));
     }
 })();
 
