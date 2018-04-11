@@ -27,21 +27,5 @@
         "created"    : "03. August 2016",
         "description": "some dev-life saving PHP Array functions",
         "link"       : "./assets/blog/practicalphparrayfunctions.md"
-    },
-    "unityressources": {
-        "type"       : "blog",
-        "subtype"    : "unity",
-        "name"       : "Unity Ressources",
-        "created"    : "28. März 2018",
-        "description": "ressources like models, animations, textures ...",
-        "link"       : "./assets/blog/unityressources.md"
-    },
-    "unityscripts": {
-        "type"       : "blog",
-        "subtype"    : "unity",
-        "name"       : "Unity Scripts",
-        "created"    : "02. April 2018",
-        "description": "unity scripts...",
-        "link"       : "./assets/blog/unityscripts.md"
     }
 }

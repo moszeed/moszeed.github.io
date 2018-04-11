@@ -7,7 +7,7 @@
     var choo = require('choo');
     var markdown = require('markdown-it')();
 
-    var body = (require('sheetify/insert')("._52d89b7e {\n            display: grid;\n            grid-template-columns: 200px auto;\n            grid-template-rows: auto;\n        }\n\n        html, body {\n            padding: 0;\n            margin: 0;\n            width: 100%;\n            height: 100%;\n            overflow: hidden;\n            font-size: 1em;\n            font-family: Helvetica, Arial, FreeSans, sans-serif;\n        }\n\n        nav {\n            color: #EFEFEF;\n            background-color: #121212;\n            padding: 10px;\n        }\n\n        nav p {\n            letter-spacing: 1px;\n            font-size: 80%;\n        }\n\n        nav h4 {\n            margin-bottom: 4px;\n        }\n\n        ul {\n            list-style: none;\n            padding: 0;\n            margin: 0;\n        }\n\n        ul li span.created {\n            font-weight: bold;\n            width: 140px;\n            display: inline-block;\n            padding: 10px;\n            background-color: #DEDEDE;\n        }\n\n        ul li div.name {\n            margin-left: 20px;\n            font-weight: bold;\n        }\n\n        ul li div.description {\n            font-size: 90%;\n            margin-left: 20px;\n        }\n\n        nav ul.project {\n            margin-left: 10px;\n        }\n\n        nav hr {\n            border: 1px solid #363636;\n        }\n\n        nav ul li {\n            color: #EFEFEF;\n            text-transform: lowercase;\n            margin-bottom: 8px;\n            margin-top: 8px;\n        }\n\n        main section ul li {\n            display: grid;\n            grid-template-columns: 170px auto;\n            margin-bottom: 8px;\n        }\n\n        main section ul li:hover {\n            cursor: pointer;\n            background-color: #D4D4D4;\n        }\n\n        nav ul li.firstItem {\n            margin-bottom: 8px;\n        }\n\n        nav ul li:hover {\n            cursor: pointer;\n            text-decoration: underline;\n        }\n\n        #impressum {\n            position: absolute;\n            left: 20px;\n            bottom: 10px;\n        }\n\n        #impressum a {\n            color: #626262;\n            font-size: 12px;\n            text-decoration: none;\n        }\n\n        pre {\n            font-family: \"Courier 10 Pitch\", Courier, monospace;\n            font-size: 95%;\n            line-height: 140%;\n            white-space: pre;\n            white-space: pre-wrap;\n            white-space: -moz-pre-wrap;\n            white-space: -o-pre-wrap;\n            background: #faf8f0;\n        }\n\n        code {\n            font-family: Monaco, Consolas, \"Andale Mono\", \"DejaVu Sans Mono\", monospace;\n            font-size: 95%;\n            line-height: 140%;\n            white-space: pre;\n            white-space: pre-wrap;\n            white-space: -moz-pre-wrap;\n            white-space: -o-pre-wrap;\n        }\n\n        main {\n            background-color: #FEFEFE;\n            padding: 10px 30px;\n            overflow: auto;\n            box-shadow: 4px 0px 6px inset #333333;\n            display: grid;\n            grid-template-columns: auto 400px;\n            grid-template-rows: auto;\n        }\n\n        main section {\n            overflow: auto;\n            padding: 10px;\n        }\n\n        main.blog {\n            display: block;\n        }\n\n        main.blog section.external {\n            padding: 20px;\n        }") || true) && "_52d89b7e";
+    var body = (require('sheetify/insert')("@import url('https://fonts.googleapis.com/css?family=Roboto');\n\n        ._a7b5b073 {\n            display: grid;\n            grid-template-columns: 300px auto;\n            grid-template-rows: auto;\n        }\n\n        html, body {\n            padding: 0;\n            margin: 0;\n            width: 100%;\n            height: 100%;\n            overflow: hidden;\n            font-size: 1em;\n            font-family: 'Roboto', sans-serif;\n        }\n\n        nav {\n            color: #EFEFEF;\n            background-color: #121212;\n            padding: 10px;\n        }\n\n        nav p {\n            letter-spacing: 1px;\n            font-size: 80%;\n            padding: 20px;\n            background-color: #868585E6;\n            border-radius: 100%;\n            height: 50px;\n            width: 50px;\n            position: relative;\n        }\n\n        nav p span {\n            position:absolute;\n            left: 20px;\n            top: 20px;\n            width: 240px;\n        }\n\n        nav h4 {\n            margin-bottom: 4px;\n        }\n\n        nav section {\n            padding: 40px 20px;\n        }\n\n        ul {\n            list-style: none;\n            padding: 0;\n            margin: 0;\n        }\n\n        ul li span.created {\n            font-weight: bold;\n            width: 140px;\n            display: inline-block;\n            padding: 10px;\n            background-color: #DEDEDE;\n        }\n\n        ul li div.name {\n            margin-left: 20px;\n            font-weight: bold;\n        }\n\n        ul li div.description {\n            font-size: 90%;\n            margin-left: 20px;\n        }\n\n        nav ul.project {\n            margin-left: 10px;\n        }\n\n        nav hr {\n            border: 1px solid #363636;\n        }\n\n        nav ul li {\n            color: #EFEFEF;\n            text-transform: lowercase;\n            margin-bottom: 8px;\n            margin-top: 8px;\n        }\n\n        main section ul li {\n            display: grid;\n            grid-template-columns: 170px auto;\n            margin-bottom: 8px;\n        }\n\n        main section ul li:hover {\n            cursor: pointer;\n            background-color: #D4D4D4;\n        }\n\n        nav ul li.firstItem {\n            margin-bottom: 8px;\n        }\n\n        nav ul li:hover {\n            cursor: pointer;\n            text-decoration: underline;\n        }\n\n        #impressum {\n            position: absolute;\n            left: 20px;\n            bottom: 10px;\n        }\n\n        #impressum a {\n            color: #626262;\n            font-size: 12px;\n            text-decoration: none;\n        }\n\n        pre {\n            font-family: \"Courier 10 Pitch\", Courier, monospace;\n            font-size: 95%;\n            line-height: 140%;\n            white-space: pre;\n            white-space: pre-wrap;\n            white-space: -moz-pre-wrap;\n            white-space: -o-pre-wrap;\n            background: #262626;\n            color: #E1E2A4;\n            padding: 20px;\n        }\n\n        code {\n            font-family: Monaco, Consolas, \"Andale Mono\", \"DejaVu Sans Mono\", monospace;\n            font-size: 95%;\n            line-height: 140%;\n            white-space: pre;\n            white-space: pre-wrap;\n            white-space: -moz-pre-wrap;\n            white-space: -o-pre-wrap;\n        }\n\n        main {\n            background-color: #FEFEFE;\n            padding: 20px;\n            overflow: auto;\n            box-shadow: 4px 0px 6px inset #333333;\n            display: grid;\n            grid-template-columns: auto 400px;\n            grid-template-rows: auto;\n        }\n\n        main section {\n            overflow: auto;\n            padding: 10px;\n        }\n\n        main.blog {\n            display: block;\n            padding: 5% 10%;\n        }\n\n        main.blog section.external {\n            padding: 20px;\n        }") || true) && "_a7b5b073";
 
     var app = choo();
     app.use(function (state, emitter) {
@@ -141,7 +141,7 @@
             }(body, navigationView(state, emit));
         }
 
-        var postItem = state.posts[state.params.post];
+        var postItem = state.posts[state.params.post] || state.pages[state.params.post];
         var $externalContent = function () {
             var bel0 = document.createElement("div");
             return bel0;
@@ -174,59 +174,96 @@
     }
 
     function navigationView(state, emit) {
-        var $projectList = '';
-
-        if (state.pages) {
-            var $liArray = Object.keys(state.pages).map(function (key) {
-                return function () {
-                    var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
-                    var bel0 = document.createElement("li");
-                    bel0["onclick"] = arguments[0];
-                    ac(bel0, [".", arguments[1]]);
-                    return bel0;
-                }(function () {
-                    return setOpenPage(key);
-                }, state.pages[key].name);
-            }).filter(Boolean);
-
-            $projectList = function () {
+        if (!state.pages) {
+            return function () {
                 var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
-                var bel2 = document.createElement("section");
-                var bel0 = document.createElement("h4");
-                ac(bel0, [".pages"]);
-                var bel1 = document.createElement("ul");
-                bel1.setAttribute("class", "project");
-                ac(bel1, ["\n                    ", arguments[0], "\n                "]);
-                ac(bel2, ["\n                ", bel0, "\n                ", bel1, "\n            "]);
-                return bel2;
-            }($liArray);
+                var bel6 = document.createElement("nav");
+                var bel1 = document.createElement("p");
+                var bel0 = document.createElement("span");
+                ac(bel0, ["Hi and welcome, i am Moszeed, from Germany. I love to write Code, to create Apps, Pages and Modules."]);
+                ac(bel1, [bel0]);
+                var bel3 = document.createElement("ul");
+                var bel2 = document.createElement("li");
+                bel2["onclick"] = arguments[0];
+                ac(bel2, [".index"]);
+                ac(bel3, ["\n                    ", bel2, "\n                "]);
+                var bel5 = document.createElement("div");
+                bel5.setAttribute("id", "impressum");
+                var bel4 = document.createElement("a");
+                bel4.setAttribute("href", "#impressum");
+                ac(bel4, ["Impressum"]);
+                ac(bel5, ["\n                    ", bel4, "\n                "]);
+                ac(bel6, ["\n                ", bel1, "\n                ", bel3, "\n                ", bel5, "\n            "]);
+                return bel6;
+            }(backToList);
         }
 
-        var $navigation = function () {
-            var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
-            var bel8 = document.createElement("nav");
-            var bel0 = document.createElement("h3");
-            ac(bel0, [".about"]);
-            var bel1 = document.createElement("p");
-            ac(bel1, ["Hi and welcome, i am Moszeed, from Germany. I love to write Code, to create Apps, Pages and Modules."]);
-            var bel2 = document.createElement("hr");
-            var bel3 = document.createElement("br");
-            var bel5 = document.createElement("ul");
-            var bel4 = document.createElement("li");
-            bel4["onclick"] = arguments[0];
-            ac(bel4, [".index"]);
-            ac(bel5, ["\n                ", bel4, "\n            "]);
-            var bel7 = document.createElement("div");
-            bel7.setAttribute("id", "impressum");
-            var bel6 = document.createElement("a");
-            bel6.setAttribute("href", "#impressum");
-            ac(bel6, ["Impressum"]);
-            ac(bel7, ["\n                ", bel6, "\n            "]);
-            ac(bel8, ["\n            ", bel0, "\n            ", bel1, "\n            ", bel2, bel3, "\n            ", bel5, "\n            ", arguments[1], "\n            ", bel7, "\n        "]);
-            return bel8;
-        }(backToList, $projectList);
+        var $projects = Object.keys(state.pages).filter(function (key) {
+            return state.pages[key].type === 'github';
+        }).map(function (key) {
+            return function () {
+                var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
+                var bel0 = document.createElement("li");
+                bel0["onclick"] = arguments[0];
+                ac(bel0, [".", arguments[1]]);
+                return bel0;
+            }(function () {
+                return setOpenPage(key);
+            }, state.pages[key].name);
+        });
 
-        return $navigation;
+        var $unity = Object.keys(state.pages).filter(function (key) {
+            return state.pages[key].type === 'unity';
+        }).map(function (key) {
+            return function () {
+                var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
+                var bel0 = document.createElement("li");
+                bel0["onclick"] = arguments[0];
+                ac(bel0, [".", arguments[1]]);
+                return bel0;
+            }(function () {
+                return openBlogPage(key);
+            }, state.pages[key].name);
+        });
+
+        var $projectList = function () {
+            var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
+            var bel6 = document.createElement("section");
+            var bel1 = document.createElement("ul");
+            var bel0 = document.createElement("li");
+            bel0["onclick"] = arguments[0];
+            ac(bel0, [".index"]);
+            ac(bel1, ["\n                ", bel0, "\n            "]);
+            var bel2 = document.createElement("h4");
+            ac(bel2, [".projects"]);
+            var bel3 = document.createElement("ul");
+            bel3.setAttribute("class", "project");
+            ac(bel3, ["\n                ", arguments[1], "\n            "]);
+            var bel4 = document.createElement("h4");
+            ac(bel4, [".unity"]);
+            var bel5 = document.createElement("ul");
+            bel5.setAttribute("class", "project");
+            ac(bel5, ["\n                ", arguments[2], "\n            "]);
+            ac(bel6, ["\n            ", bel1, "\n            ", bel2, "\n            ", bel3, "\n            ", bel4, "\n            ", bel5, "\n        "]);
+            return bel6;
+        }(backToList, $projects, $unity);
+
+        return function () {
+            var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
+            var bel4 = document.createElement("nav");
+            var bel1 = document.createElement("p");
+            var bel0 = document.createElement("span");
+            ac(bel0, ["Hi and welcome, i am Moszeed, from Germany. I love to write Code, to create Apps, Pages and Modules."]);
+            ac(bel1, [bel0]);
+            var bel3 = document.createElement("div");
+            bel3.setAttribute("id", "impressum");
+            var bel2 = document.createElement("a");
+            bel2.setAttribute("href", "#impressum");
+            ac(bel2, ["Impressum"]);
+            ac(bel3, ["\n                ", bel2, "\n            "]);
+            ac(bel4, ["\n            ", bel1, "\n            ", arguments[0], "\n            ", bel3, "\n        "]);
+            return bel4;
+        }($projectList);
 
         function backToList() {
             emit('pushState', '/');
@@ -234,6 +271,10 @@
 
         function setOpenPage(key) {
             emit('pushState', '#pages/' + key);
+        }
+
+        function openBlogPage(key) {
+            emit('pushState', '#blog/' + key);
         }
     }
 
@@ -277,7 +318,7 @@
 
         return function () {
             var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
-            var bel7 = document.createElement("div");
+            var bel4 = document.createElement("div");
             var bel0 = document.createElement("ul");
             ac(bel0, [arguments[0]]);
             var bel1 = document.createElement("hr");
@@ -285,14 +326,9 @@
             ac(bel2, ["PHP"]);
             var bel3 = document.createElement("ul");
             ac(bel3, [arguments[1]]);
-            var bel4 = document.createElement("hr");
-            var bel5 = document.createElement("h5");
-            ac(bel5, ["Unity 3D"]);
-            var bel6 = document.createElement("ul");
-            ac(bel6, [arguments[2]]);
-            ac(bel7, ["\n            ", bel0, "\n            ", bel1, "\n            ", bel2, "\n            ", bel3, "\n            ", bel4, "\n            ", bel5, "\n            ", bel6, "\n        "]);
-            return bel7;
-        }($liGroups.default, $liGroups.php, $liGroups.unity);
+            ac(bel4, ["\n            ", bel0, "\n            ", bel1, "\n            ", bel2, "\n            ", bel3, "\n        "]);
+            return bel4;
+        }($liGroups.default, $liGroups.php);
 
         function setOpenPage(key) {
             emit('pushState', '#blog/' + key);

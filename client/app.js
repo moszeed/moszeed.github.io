@@ -7,9 +7,11 @@
     const markdown = require('markdown-it')();
 
     const body = css`
+        @import url('https://fonts.googleapis.com/css?family=Roboto');
+
         :host {
             display: grid;
-            grid-template-columns: 200px auto;
+            grid-template-columns: 300px auto;
             grid-template-rows: auto;
         }
 
@@ -20,7 +22,7 @@
             height: 100%;
             overflow: hidden;
             font-size: 1em;
-            font-family: Helvetica, Arial, FreeSans, sans-serif;
+            font-family: 'Roboto', sans-serif;
         }
 
         nav {
@@ -32,10 +34,27 @@
         nav p {
             letter-spacing: 1px;
             font-size: 80%;
+            padding: 20px;
+            background-color: #868585E6;
+            border-radius: 100%;
+            height: 50px;
+            width: 50px;
+            position: relative;
+        }
+
+        nav p span {
+            position:absolute;
+            left: 20px;
+            top: 20px;
+            width: 240px;
         }
 
         nav h4 {
             margin-bottom: 4px;
+        }
+
+        nav section {
+            padding: 40px 20px;
         }
 
         ul {
@@ -117,7 +136,9 @@
             white-space: pre-wrap;
             white-space: -moz-pre-wrap;
             white-space: -o-pre-wrap;
-            background: #faf8f0;
+            background: #262626;
+            color: #E1E2A4;
+            padding: 20px;
         }
 
         code {
@@ -132,7 +153,7 @@
 
         main {
             background-color: #FEFEFE;
-            padding: 10px 30px;
+            padding: 20px;
             overflow: auto;
             box-shadow: 4px 0px 6px inset #333333;
             display: grid;
@@ -147,6 +168,7 @@
 
         main.blog {
             display: block;
+            padding: 5% 10%;
         }
 
         main.blog section.external {
@@ -250,7 +272,7 @@
             </body>`;
         }
 
-        let postItem = state.posts[state.params.post];
+        let postItem = state.posts[state.params.post] || state.pages[state.params.post];
         let $externalContent = html`<div></div>`;
 
         if (state.openPage !== state.params.post) {
@@ -274,35 +296,47 @@
     }
 
     function navigationView (state, emit) {
-        let $projectList = '';
-
-        if (state.pages) {
-            const $liArray = Object.keys(state.pages)
-                .map((key) => html`<li onclick=${() => setOpenPage(key)}>.${state.pages[key].name}</li>`)
-                .filter(Boolean);
-
-            $projectList = html`<section>
-                <h4>.pages</h4>
-                <ul class="project">
-                    ${$liArray}
+        if (!state.pages) {
+            return html`<nav>
+                <p><span>Hi and welcome, i am Moszeed, from Germany. I love to write Code, to create Apps, Pages and Modules.</span></p>
+                <ul>
+                    <li onclick=${backToList}>.index</li>
                 </ul>
-            </section>`;
+                <div id="impressum">
+                    <a href="#impressum">Impressum</a>
+                </div>
+            </nav>`;
         }
 
-        const $navigation = html`<nav>
-            <h3>.about</h3>
-            <p>Hi and welcome, i am Moszeed, from Germany. I love to write Code, to create Apps, Pages and Modules.</p>
-            <hr><br>
+        const $projects = Object.keys(state.pages)
+            .filter((key) => state.pages[key].type === 'github')
+            .map((key) => html`<li onclick=${() => setOpenPage(key)}>.${state.pages[key].name}</li>`);
+
+        const $unity = Object.keys(state.pages)
+            .filter((key) => state.pages[key].type === 'unity')
+            .map((key) => html`<li onclick=${() => openBlogPage(key)}>.${state.pages[key].name}</li>`);
+
+        const $projectList = html`<section>
             <ul>
                 <li onclick=${backToList}>.index</li>
             </ul>
+            <h4>.projects</h4>
+            <ul class="project">
+                ${$projects}
+            </ul>
+            <h4>.unity</h4>
+            <ul class="project">
+                ${$unity}
+            </ul>
+        </section>`;
+
+        return html`<nav>
+            <p><span>Hi and welcome, i am Moszeed, from Germany. I love to write Code, to create Apps, Pages and Modules.</span></p>
             ${$projectList}
             <div id="impressum">
                 <a href="#impressum">Impressum</a>
             </div>
         </nav>`;
-
-        return $navigation;
 
         function backToList () {
             emit('pushState', `/`);
@@ -310,6 +344,10 @@
 
         function setOpenPage (key) {
             emit('pushState', `#pages/${key}`);
+        }
+
+        function openBlogPage (key) {
+            emit('pushState', `#blog/${key}`);
         }
     }
 
@@ -344,9 +382,6 @@
             <hr>
             <h5>PHP</h5>
             <ul>${$liGroups.php}</ul>
-            <hr>
-            <h5>Unity 3D</h5>
-            <ul>${$liGroups.unity}</ul>
         </div>`;
 
         function setOpenPage (key) {
