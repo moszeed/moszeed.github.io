@@ -27,5 +27,12 @@
         "created"    : "03. August 2016",
         "description": "some dev-life saving PHP Array functions",
         "link"       : "./assets/blog/practicalphparrayfunctions.md"
+    },
+    "things4free": {
+        "type"       : "blog",
+        "name"       : "4 Free Software",
+        "created"    : "12. April 2018",
+        "description": "a list of free software",
+        "link"       : "./assets/blog/things4free.md"
     }
 }
