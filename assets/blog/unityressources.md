@@ -12,3 +12,6 @@
 #### YouTube Channels
 
 + Brackeys [Brackeys](https://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA)
+
+#### Unity
++ [Unity Hub](https://blogs.unity3d.com/2018/01/24/streamline-your-workflow-introducing-unity-hub-beta/)
