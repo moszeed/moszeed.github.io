@@ -25,6 +25,21 @@
             font-family: 'Roboto', sans-serif;
         }
 
+        h1 {
+            background-color: #1E1E1ECC;
+            border-bottom: 1px solid;
+            padding: 16px;
+            margin: 0;
+            letter-spacing: 1px;
+            color: #FEFEFE;
+        }
+
+        h2 {
+            border-bottom: 1px solid #B6B6B6;
+            background-color: #F0F0F0;
+            padding: 8px;
+        }
+
         nav {
             color: #EFEFEF;
             background-color: #121212;
@@ -138,7 +153,9 @@
             white-space: -o-pre-wrap;
             background: #262626;
             color: #E1E2A4;
-            padding: 20px;
+            padding: 16px;
+            max-height: 300px;
+            overflow: auto;
         }
 
         code {
@@ -174,6 +191,25 @@
         main.blog section.external {
             padding: 20px;
         }
+
+        @media (max-width: 1100px) {
+            main {
+                display: block;
+            }
+        }
+
+        @media (max-width: 900px) {
+            :host {
+                display: block;
+                overflow: auto;
+            }
+
+            nav ul li{
+                display: inline-flex;
+                margin-right: 16px;
+            }
+        }
+
     `;
 
     const app = choo();
@@ -316,6 +352,10 @@
             .filter((key) => state.pages[key].type === 'unity')
             .map((key) => html`<li onclick=${() => openBlogPage(key)}>.${state.pages[key].name}</li>`);
 
+        const $other = Object.keys(state.pages)
+            .filter((key) => state.pages[key].type === 'other')
+            .map((key) => html`<li onclick=${() => openBlogPage(key)}>.${state.pages[key].name}</li>`);
+
         const $projectList = html`<section>
             <ul>
                 <li onclick=${backToList}>.index</li>
@@ -327,6 +367,10 @@
             <h4>.unity</h4>
             <ul class="project">
                 ${$unity}
+            </ul>
+            <h4>.other</h4>
+            <ul class="project">
+                ${$other}
             </ul>
         </section>`;
 
