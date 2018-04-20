@@ -174,8 +174,9 @@
             overflow: auto;
             box-shadow: 4px 0px 6px inset #333333;
             display: grid;
-            grid-template-columns: auto 400px;
+            grid-template-columns: auto 500px;
             grid-template-rows: auto;
+            font-size: 90%;
         }
 
         main section {
@@ -208,6 +209,11 @@
                 display: inline-flex;
                 margin-right: 16px;
             }
+        }
+
+        iframe {
+            margin-top: -65px;
+            height: calc(100% + 65px);
         }
 
     `;
@@ -435,12 +441,7 @@
 
     function mainView (state, emit) {
         const $social = html`<section>
-            <h3>Social</h3>
-            <h5>YouTube Likes</h5>
-            <iframe width="370" height="300" src="https://www.youtube.com/embed/videoseries?list=LLIP3PUKG7eeAkbf8Rwbhz8g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            <h5>Pinterest Likes</h5>
-            <a data-pin-do="embedUser" data-pin-board-width="350" data-pin-scale-height="400" data-pin-scale-width="115" href="https://www.pinterest.com/moszeed/"></a>
-            <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+            <iframe src='https://www.juicer.io/api/feeds/moszeed/iframe' frameborder='0' width='100%' height='100%'></iframe>
         </section>`;
 
         return html`<body class=${body}>
