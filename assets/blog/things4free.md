@@ -6,10 +6,15 @@
 + [Unity](https://unity3d.com) - Unity Game Engine
 + [Unreal Engine](https://www.unrealengine.com) - Unreal Game Engine
 
+## Code-,Text-Editors
++ [SublimeText](http://www.sublimetext.com/) - A sophisticated text editor for code, markup and prose
++ [VSCode](https://code.visualstudio.com/) - a CodeEditor by Microsoft
+
 ## Design, Graphic, Drawing ...
 + [Krita](https://krita.org) - Krita is like "Photoshop"
 + [Gravit](https://gravit.io/) - Gravit is like "Sketch" or "Illustrator"
 + [Darktable](https://www.darktable.org/) - Darktable is like "Lightroom"
++ [GIMP](https://www.gimp.org/) - GNU IMAGE MANIPULATION PROGRAM
 
 ## 3D Modelling
 + [MagicaVoxel](https://ephtracy.github.io) - a 8-bit voxel art editor and interactive path tracing renderer
@@ -17,5 +22,9 @@
 
 ## Music
 + [LMMS](https://lmms.io/) - a Tracker like Renoise, but complete free and Open Source
+
+## Terminals
++ [cmder](http://cmder.net/) - Console Emulator (Win) based on ConEmu
+
 
 #### ! this is a growing list

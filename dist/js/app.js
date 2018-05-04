@@ -7,7 +7,7 @@
     var choo = require('choo');
     var markdown = require('markdown-it')();
 
-    var body = (require('sheetify/insert')("@import url('https://fonts.googleapis.com/css?family=Roboto');\n\n        ._677ddb7e {\n            display: grid;\n            grid-template-columns: 300px auto;\n            grid-template-rows: auto;\n        }\n\n        html, body {\n            padding: 0;\n            margin: 0;\n            width: 100%;\n            height: 100%;\n            overflow: hidden;\n            font-size: 1em;\n            font-family: 'Roboto', sans-serif;\n        }\n\n        h1 {\n            background-color: #1E1E1ECC;\n            border-bottom: 1px solid;\n            padding: 16px;\n            margin: 0;\n            letter-spacing: 1px;\n            color: #FEFEFE;\n        }\n\n        h2 {\n            border-bottom: 1px solid #B6B6B6;\n            background-color: #F0F0F0;\n            padding: 8px;\n        }\n\n        nav {\n            color: #EFEFEF;\n            background-color: #121212;\n            padding: 10px;\n        }\n\n        nav p {\n            letter-spacing: 1px;\n            font-size: 80%;\n            padding: 20px;\n            background-color: #868585E6;\n            border-radius: 100%;\n            height: 50px;\n            width: 50px;\n            position: relative;\n        }\n\n        nav p span {\n            position:absolute;\n            left: 20px;\n            top: 20px;\n            width: 240px;\n        }\n\n        nav h4 {\n            margin-bottom: 4px;\n        }\n\n        nav section {\n            padding: 40px 20px;\n        }\n\n        ul {\n            list-style: none;\n            padding: 0;\n            margin: 0;\n        }\n\n        ul li span.created {\n            font-weight: bold;\n            width: 140px;\n            display: inline-block;\n            padding: 10px;\n            background-color: #DEDEDE;\n        }\n\n        ul li div.name {\n            margin-left: 20px;\n            font-weight: bold;\n        }\n\n        ul li div.description {\n            font-size: 90%;\n            margin-left: 20px;\n        }\n\n        nav ul.project {\n            margin-left: 10px;\n        }\n\n        nav hr {\n            border: 1px solid #363636;\n        }\n\n        nav ul li {\n            color: #EFEFEF;\n            text-transform: lowercase;\n            margin-bottom: 8px;\n            margin-top: 8px;\n        }\n\n        main section ul li {\n            display: grid;\n            grid-template-columns: 170px auto;\n            margin-bottom: 8px;\n        }\n\n        main section ul li:hover {\n            cursor: pointer;\n            background-color: #D4D4D4;\n        }\n\n        nav ul li.firstItem {\n            margin-bottom: 8px;\n        }\n\n        nav ul li:hover {\n            cursor: pointer;\n            text-decoration: underline;\n        }\n\n        #impressum {\n            position: absolute;\n            left: 20px;\n            bottom: 10px;\n        }\n\n        #impressum a {\n            color: #626262;\n            font-size: 12px;\n            text-decoration: none;\n        }\n\n        pre {\n            font-family: \"Courier 10 Pitch\", Courier, monospace;\n            font-size: 95%;\n            line-height: 140%;\n            white-space: pre;\n            white-space: pre-wrap;\n            white-space: -moz-pre-wrap;\n            white-space: -o-pre-wrap;\n            background: #262626;\n            color: #E1E2A4;\n            padding: 16px;\n            max-height: 300px;\n            overflow: auto;\n        }\n\n        code {\n            font-family: Monaco, Consolas, \"Andale Mono\", \"DejaVu Sans Mono\", monospace;\n            font-size: 95%;\n            line-height: 140%;\n            white-space: pre;\n            white-space: pre-wrap;\n            white-space: -moz-pre-wrap;\n            white-space: -o-pre-wrap;\n        }\n\n        main {\n            background-color: #FEFEFE;\n            padding: 20px;\n            overflow: auto;\n            box-shadow: 4px 0px 6px inset #333333;\n            display: grid;\n            grid-template-columns: auto 500px;\n            grid-template-rows: auto;\n            font-size: 90%;\n        }\n\n        main section {\n            overflow: auto;\n            padding: 10px;\n        }\n\n        main.blog {\n            display: block;\n            padding: 5% 10%;\n        }\n\n        main.blog section.external {\n            padding: 20px;\n        }\n\n        @media (max-width: 1100px) {\n            main {\n                display: block;\n            }\n        }\n\n        @media (max-width: 900px) {\n            ._677ddb7e {\n                display: block;\n                overflow: auto;\n            }\n\n            nav ul li{\n                display: inline-flex;\n                margin-right: 16px;\n            }\n        }\n\n        iframe {\n            margin-top: -65px;\n            height: calc(100% + 65px);\n        }") || true) && "_677ddb7e";
+    var body = (require('sheetify/insert')("@import url('https://fonts.googleapis.com/css?family=Roboto');\n\n        ._07c4c3e6 {\n            display: grid;\n            grid-template-columns: 300px auto;\n            grid-template-rows: auto;\n        }\n\n        html, body {\n            padding: 0;\n            margin: 0;\n            width: 100%;\n            height: 100%;\n            overflow: hidden;\n            font-size: 1em;\n            font-family: 'Roboto', sans-serif;\n        }\n\n        h1 {\n            background-color: #1E1E1ECC;\n            border-bottom: 1px solid;\n            padding: 16px;\n            margin: 0;\n            letter-spacing: 1px;\n            color: #FEFEFE;\n        }\n\n        h2 {\n            background-color: #E7F2D2;\n            padding: 8px;\n            margin-top: 30px;\n            font-size: 120%;\n        }\n\n        nav {\n            color: #EFEFEF;\n            background-color: #121212;\n            padding: 10px;\n        }\n\n        nav p {\n            letter-spacing: 1px;\n            font-size: 80%;\n            padding: 20px;\n            background-color: #868585E6;\n            border-radius: 100%;\n            height: 50px;\n            width: 50px;\n            position: relative;\n        }\n\n        nav p span {\n            position:absolute;\n            left: 20px;\n            top: 20px;\n            width: 240px;\n        }\n\n        nav h4 {\n            margin-bottom: 4px;\n        }\n\n        nav section {\n            padding: 40px 20px;\n        }\n\n        ul {\n            list-style: none;\n            padding: 0;\n            margin: 0;\n        }\n\n        ul li span.created {\n            font-weight: bold;\n            width: 140px;\n            display: inline-block;\n            padding: 10px;\n            background-color: #DEDEDE;\n        }\n\n        ul li div.name {\n            margin-left: 20px;\n            font-weight: bold;\n        }\n\n        ul li div.description {\n            font-size: 90%;\n            margin-left: 20px;\n        }\n\n        nav ul.project {\n            margin-left: 10px;\n        }\n\n        nav hr {\n            border: 1px solid #363636;\n        }\n\n        nav ul li {\n            color: #EFEFEF;\n            text-transform: lowercase;\n            margin-bottom: 8px;\n            margin-top: 8px;\n        }\n\n        main section ul li {\n            display: grid;\n            grid-template-columns: 170px auto;\n            margin-bottom: 8px;\n        }\n\n        main section ul li:hover {\n            cursor: pointer;\n            background-color: #D4D4D4;\n        }\n\n        nav ul li.firstItem {\n            margin-bottom: 8px;\n        }\n\n        nav ul li:hover {\n            cursor: pointer;\n            text-decoration: underline;\n        }\n\n        #impressum {\n            position: absolute;\n            left: 20px;\n            bottom: 10px;\n            border-top: 1px solid #393939;\n        }\n\n        #impressum a {\n            color: #626262;\n            font-size: 12px;\n            text-decoration: none;\n            margin-right:10px;\n        }\n\n        pre {\n            font-family: \"Courier 10 Pitch\", Courier, monospace;\n            font-size: 95%;\n            line-height: 140%;\n            white-space: pre;\n            white-space: pre-wrap;\n            white-space: -moz-pre-wrap;\n            white-space: -o-pre-wrap;\n            background: #262626;\n            color: #E1E2A4;\n            padding: 16px;\n            max-height: 300px;\n            overflow: auto;\n        }\n\n        code {\n            font-family: Monaco, Consolas, \"Andale Mono\", \"DejaVu Sans Mono\", monospace;\n            font-size: 95%;\n            line-height: 140%;\n            white-space: pre;\n            white-space: pre-wrap;\n            white-space: -moz-pre-wrap;\n            white-space: -o-pre-wrap;\n        }\n\n        main {\n            background-color: #FEFEFE;\n            padding: 20px;\n            overflow: auto;\n            box-shadow: 4px 0px 6px inset #333333;\n            display: grid;\n            grid-template-columns: auto 500px;\n            grid-template-rows: auto;\n            font-size: 90%;\n        }\n\n        main section {\n            overflow: auto;\n            padding: 10px;\n        }\n\n        main.blog {\n            display: block;\n            padding: 5% 10%;\n        }\n\n        main.blog ul li {\n            padding: 2px 10px 2px 10px;\n        }\n\n        main.blog section.external {\n            padding: 20px;\n        }\n\n        @media (max-width: 1100px) {\n            main {\n                display: block;\n            }\n        }\n\n        @media (max-width: 900px) {\n            ._07c4c3e6 {\n                display: block;\n                overflow: auto;\n            }\n\n            nav ul li{\n                display: inline-flex;\n                margin-right: 16px;\n            }\n        }\n\n        iframe {\n            margin-top: -65px;\n            height: calc(100% + 65px);\n        }") || true) && "_07c4c3e6";
 
     var app = choo();
     app.use(function (state, emitter) {
@@ -24,6 +24,7 @@
     });
     app.route('/', mainView);
     app.route('#impressum', impressumView);
+    app.route('#datenschutz', datenschutzView);
     app.route('#blog/:post', blogPostView);
     app.route('#pages/:page', githubProjectView);
 
@@ -58,6 +59,7 @@
             var bel5 = document.createElement("body");
             bel5.setAttribute("class", arguments[0]);
             var bel4 = document.createElement("main");
+            bel4.setAttribute("class", "blog");
             var bel0 = document.createElement("h3");
             ac(bel0, ["Impressum moszeed.de"]);
             var bel1 = document.createElement("div");
@@ -70,6 +72,233 @@
             ac(bel4, ["\n                ", bel0, "\n                ", bel1, "\n                ", bel3, "\n            "]);
             ac(bel5, ["\n            ", arguments[1], "\n            ", bel4, "\n        "]);
             return bel5;
+        }(body, navigationView(state, emit));
+    }
+
+    function datenschutzView(state, emit) {
+        return function () {
+            var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
+            var bel97 = document.createElement("body");
+            bel97.setAttribute("class", arguments[0]);
+            var bel96 = document.createElement("main");
+            bel96.setAttribute("class", "blog");
+            var bel0 = document.createElement("h1");
+            ac(bel0, ["Datenschutzerklärung"]);
+            var bel1 = document.createElement("h2");
+            ac(bel1, ["Datenschutz"]);
+            var bel2 = document.createElement("p");
+            ac(bel2, ["Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung."]);
+            var bel3 = document.createElement("p");
+            ac(bel3, ["Die Nutzung unserer Website ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben."]);
+            var bel4 = document.createElement("p");
+            ac(bel4, ["Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich."]);
+            var bel5 = document.createElement("p");
+            ac(bel5, [" "]);
+            var bel6 = document.createElement("h2");
+            ac(bel6, ["Cookies"]);
+            var bel7 = document.createElement("p");
+            ac(bel7, ["Die Internetseiten verwenden teilweise so genannte Cookies. Cookies richten auf Ihrem Rechner keinen Schaden an und enthalten keine Viren. Cookies dienen dazu, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen. Cookies sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und die Ihr Browser speichert."]);
+            var bel8 = document.createElement("p");
+            ac(bel8, ["Die meisten der von uns verwendeten Cookies sind so genannte „Session-Cookies“. Sie werden nach Ende Ihres Besuchs automatisch gelöscht. Andere Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen. Diese Cookies ermöglichen es uns, Ihren Browser beim nächsten Besuch wiederzuerkennen."]);
+            var bel9 = document.createElement("p");
+            ac(bel9, ["Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschlie&szlig;en sowie das automatische Löschen der Cookies beim Schlie&szlig;en des Browser aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt sein."]);
+            var bel10 = document.createElement("p");
+            ac(bel10, [" "]);
+            var bel11 = document.createElement("h2");
+            ac(bel11, ["Server-LogFiles"]);
+            var bel12 = document.createElement("p");
+            ac(bel12, ["Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log Files, die Ihr Browser automatisch an uns übermittelt. Dies sind:"]);
+            var bel18 = document.createElement("ul");
+            var bel13 = document.createElement("li");
+            ac(bel13, ["Browsertyp und Browserversion"]);
+            var bel14 = document.createElement("li");
+            ac(bel14, ["verwendetes Betriebssystem"]);
+            var bel15 = document.createElement("li");
+            ac(bel15, ["Referrer URL"]);
+            var bel16 = document.createElement("li");
+            ac(bel16, ["Hostname des zugreifenden Rechners"]);
+            var bel17 = document.createElement("li");
+            ac(bel17, ["Uhrzeit der Serveranfrage"]);
+            ac(bel18, [" ", bel13, " ", bel14, " ", bel15, " ", bel16, " ", bel17, " "]);
+            var bel19 = document.createElement("p");
+            ac(bel19, ["Diese Daten sind nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Wir behalten uns vor, diese Daten nachträglich zu prüfen, wenn uns konkrete Anhaltspunkte für eine rechtswidrige Nutzung bekannt werden."]);
+            var bel20 = document.createElement("p");
+            ac(bel20, [" "]);
+            var bel21 = document.createElement("h2");
+            ac(bel21, ["Kontaktformular"]);
+            var bel22 = document.createElement("p");
+            ac(bel22, ["Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter."]);
+            var bel23 = document.createElement("p");
+            ac(bel23, [" "]);
+            var bel24 = document.createElement("h2");
+            ac(bel24, ["Newsletterdaten"]);
+            var bel25 = document.createElement("p");
+            ac(bel25, ["Wenn Sie den auf der Website angebotenen Newsletter beziehen möchten, benötigen wir von Ihnen eine E-Mail-Adresse sowie Informationen, welche uns die überprüfung gestatten, dass Sie der Inhaber der angegebenen E-Mail-Adresse sind und mit dem Empfang des Newsletters einverstanden sind. Weitere Daten werden nicht erhoben. Diese Daten verwenden wir ausschlie&szlig;lich für den Versand der angeforderten Informationen und geben sie nicht an Dritte weiter."]);
+            var bel26 = document.createElement("p");
+            ac(bel26, ["Die erteilte Einwilligung zur Speicherung der Daten, der E-Mail-Adresse\n                sowie deren Nutzung zum Versand des Newsletters können Sie jederzeit widerrufen, etwa über den \"Austragen\"-Link im Newsletter."]);
+            var bel27 = document.createElement("p");
+            ac(bel27, [" "]);
+            var bel28 = document.createElement("h2");
+            ac(bel28, ["Google Analytics"]);
+            var bel29 = document.createElement("p");
+            ac(bel29, ["Diese Website nutzt Funktionen des Webanalysedienstes Google Analytics. Anbieter ist die Google Inc., 1600 Amphitheatre Parkway Mountain View, CA 94043, USA."]);
+            var bel30 = document.createElement("p");
+            ac(bel30, ["Google Analytics verwendet so genannte \"Cookies\". Das sind Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert."]);
+            var bel32 = document.createElement("p");
+            var bel31 = document.createElement("strong");
+            ac(bel31, ["IP Anonymisierung"]);
+            ac(bel32, [bel31]);
+            var bel33 = document.createElement("p");
+            ac(bel33, ["Wir haben auf dieser Website die Funktion IP-Anonymisierung aktiviert. Dadurch wird Ihre IP-Adresse von Google innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum vor der übermittlung in die USA gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringen. Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt."]);
+            var bel35 = document.createElement("p");
+            var bel34 = document.createElement("strong");
+            ac(bel34, ["Browser Plugin"]);
+            ac(bel35, [bel34]);
+            var bel37 = document.createElement("p");
+            var bel36 = document.createElement("a");
+            bel36.setAttribute("href", "https://tools.google.com/dlpage/gaoptout?hl=de");
+            bel36.setAttribute("target", "_blank");
+            ac(bel36, ["https://tools.google.com/dlpage/gaoptout?hl=de"]);
+            ac(bel37, ["Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können. Sie können darüber hinaus die Erfassung der durch den Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren: ", bel36]);
+            var bel39 = document.createElement("p");
+            var bel38 = document.createElement("strong");
+            ac(bel38, ["Widerspruch gegen Datenerfassung"]);
+            ac(bel39, [bel38]);
+            var bel41 = document.createElement("p");
+            var bel40 = document.createElement("a");
+            bel40.setAttribute("href", "javascript:gaOptout();");
+            ac(bel40, ["Google Analytics deaktivieren"]);
+            ac(bel41, ["Sie können die Erfassung Ihrer Daten durch Google Analytics verhindern, indem Sie auf folgenden Link klicken. Es wird ein Opt-Out-Cookie gesetzt, der die Erfassung Ihrer Daten bei zukünftigen Besuchen dieser Website verhindert: ", bel40]);
+            var bel43 = document.createElement("p");
+            var bel42 = document.createElement("a");
+            bel42.setAttribute("href", "https://support.google.com/analytics/answer/6004245?hl=de");
+            bel42.setAttribute("target", "_blank");
+            ac(bel42, ["https://support.google.com/analytics/answer/6004245?hl=de"]);
+            ac(bel43, ["Mehr Informationen zum Umgang mit Nutzerdaten bei Google Analytics finden Sie in der Datenschutzerklärung von Google: ", bel42]);
+            var bel44 = document.createElement("p");
+            ac(bel44, [" "]);
+            var bel45 = document.createElement("h2");
+            ac(bel45, ["Twitter"]);
+            var bel47 = document.createElement("p");
+            var bel46 = document.createElement("a");
+            bel46.setAttribute("href", "https://twitter.com/privacy");
+            bel46.setAttribute("target", "_blank");
+            ac(bel46, ["https://twitter.com/privacy"]);
+            ac(bel47, ["Auf unseren Seiten sind Funktionen des Dienstes Twitter eingebunden. Diese Funktionen werden angeboten durch die Twitter Inc., 1355 Market Street, Suite 900, San Francisco, CA 94103, USA. Durch das Benutzen von Twitter und der Funktion \"Re-Tweet\" werden die von Ihnen besuchten Websites mit Ihrem Twitter-Account verknüpft und anderen Nutzern bekannt gegeben. Dabei werden auch Daten an Twitter übertragen. Wir weisen darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der übermittelten Daten sowie deren Nutzung durch Twitter erhalten. Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von Twitter unter ", bel46, "."]);
+            var bel49 = document.createElement("p");
+            var bel48 = document.createElement("a");
+            bel48.setAttribute("href", "https://twitter.com/account/settings");
+            bel48.setAttribute("target", "_blank");
+            ac(bel48, ["https://twitter.com/account/settings"]);
+            ac(bel49, ["Ihre Datenschutzeinstellungen bei Twitter können Sie in den Konto-Einstellungen unter: ", bel48, " ändern."]);
+            var bel50 = document.createElement("p");
+            ac(bel50, [" "]);
+            var bel51 = document.createElement("h2");
+            ac(bel51, ["Google+"]);
+            var bel52 = document.createElement("p");
+            ac(bel52, ["Unsere Seiten nutzen Funktionen von Google+. Anbieter ist die Google Inc., 1600 Amphitheatre Parkway Mountain View, CA 94043, USA."]);
+            var bel53 = document.createElement("p");
+            ac(bel53, ["Erfassung und Weitergabe von Informationen: Mithilfe der Google+-Schaltfläche können Sie Informationen weltweit veröffentlichen. über die Google+-Schaltfläche erhalten Sie und andere Nutzer personalisierte Inhalte von Google und unseren Partnern. Google speichert sowohl die Information, dass Sie für einen Inhalt +1 gegeben haben, als auch Informationen über die Seite, die Sie beim Klicken auf +1 angesehen haben. Ihre +1 können als Hinweise zusammen mit Ihrem Profilnamen und Ihrem Foto in Google-Diensten, wie etwa in Suchergebnissen oder in Ihrem Google-Profil, oder an anderen Stellen auf Websites und Anzeigen im Internet eingeblendet werden."]);
+            var bel54 = document.createElement("p");
+            ac(bel54, ["Google zeichnet Informationen über Ihre +1-Aktivitäten auf, um die Google-Dienste für Sie und andere zu verbessern. Um die Google+-Schaltfläche verwenden zu können, benötigen Sie ein weltweit sichtbares, öffentliches Google-Profil, das zumindest den für das Profil gewählten Namen enthalten muss. Dieser Name wird in allen Google-Diensten verwendet. In manchen Fällen kann dieser Name auch einen anderen Namen ersetzen, den Sie beim Teilen\n                von Inhalten über Ihr Google-Konto verwendet haben. Die Identität Ihres Google-Profils kann Nutzern angezeigt werden, die Ihre E-Mail-Adresse kennen oder über andere identifizierende Informationen von Ihnen verfügen."]);
+            var bel55 = document.createElement("p");
+            ac(bel55, ["Verwendung der erfassten Informationen: Neben den oben erläuterten Verwendungszwecken werden die von Ihnen bereitgestellten Informationen gemä&szlig; den geltenden Google-Datenschutzbestimmungen genutzt. Google veröffentlicht möglicherweise zusammengefasste Statistiken über die +1-Aktivitäten der Nutzer bzw. gibt diese an Nutzer und Partner weiter, wie etwa Publisher, Inserenten oder verbundene Websites."]);
+            var bel56 = document.createElement("p");
+            ac(bel56, [" "]);
+            var bel57 = document.createElement("h2");
+            ac(bel57, ["Instagram"]);
+            var bel58 = document.createElement("p");
+            ac(bel58, ["Auf unseren Seiten sind Funktionen des Dienstes Instagram eingebunden. Diese Funktionen werden angeboten durch die Instagram Inc., 1601 Willow Road, Menlo Park, CA, 94025, USA integriert. Wenn Sie in Ihrem Instagram-Account eingeloggt sind können Sie durch Anklicken des Instagram-Buttons die Inhalte unserer Seiten mit Ihrem InstagramProfil verlinken. Dadurch kann Instagram den Besuch unserer Seiten Ihrem Benutzerkonto zuordnen. Wir weisen darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der u?bermittelten Daten sowie deren Nutzung durch Instagram erhalten."]);
+            var bel60 = document.createElement("p");
+            var bel59 = document.createElement("a");
+            bel59.setAttribute("href", "https://instagram.com/about/legal/privacy/");
+            bel59.setAttribute("target", "_blank");
+            ac(bel59, ["https://instagram.com/about/legal/privacy/"]);
+            ac(bel60, ["Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von Instagram: ", bel59]);
+            var bel61 = document.createElement("p");
+            ac(bel61, [" "]);
+            var bel62 = document.createElement("h2");
+            ac(bel62, ["Pinterest"]);
+            var bel63 = document.createElement("p");
+            ac(bel63, ["Auf unserer Seite verwenden wir Social Plugins des sozialen Netzwerkes Pinterest, das von der Pinterest Inc., 808 Brannan Street San Francisco, CA 94103-490, USA (\"Pinterest\") betrieben wird. Wenn Sie eine Seite aufrufen, die ein solches Plugin enthält, stellt Ihr Browser eine direkte Verbindung zu den Servern von Pinterest her. Das Plugin übermittelt dabei Protokolldaten an den Server von Pinterest in die USA. Diese Protokolldaten enthalten möglicherweise Ihre IP-Adresse, die Adresse der besuchten Websites, die ebenfalls Pinterest-Funktionen enthalten, Art und Einstellungen des Browsers, Datum und Zeitpunkt der Anfrage, Ihre Verwendungsweise von Pinterest sowie Cookies."]);
+            var bel65 = document.createElement("p");
+            var bel64 = document.createElement("a");
+            bel64.setAttribute("href", "https://about.pinterest.com/de/privacy-policy");
+            bel64.setAttribute("target", "_blank");
+            ac(bel64, ["https://about.pinterest.com/de/privacypolicy"]);
+            ac(bel65, ["Weitere Informationen zu Zweck, Umfang und weiterer Verarbeitung und Nutzung der Daten durch Pinterest sowie Ihre diesbezüglichen Rechte und Möglichkeiten zum Schutz Ihrer Privatsphäre finden Sie in den den Datenschutzhinweisen von Pinterest: ", bel64]);
+            var bel66 = document.createElement("p");
+            ac(bel66, [" "]);
+            var bel67 = document.createElement("h2");
+            ac(bel67, ["SoundCloud"]);
+            var bel68 = document.createElement("p");
+            ac(bel68, ["Auf unseren Seiten können Plugins des sozialen Netzwerks SoundCloud (SoundCloud Limited, Berners House, 47-48 Berners Street, London W1T 3NF, Gro&szlig;britannien.) integriert sein. Die SoundCloud-Plugins erkennen Sie an dem SoundCloud-Logo auf den betroffenen Seiten."]);
+            var bel70 = document.createElement("p");
+            var bel69 = document.createElement("a");
+            bel69.setAttribute("href", "https://soundcloud.com/pages/privacy");
+            bel69.setAttribute("target", "_blank");
+            ac(bel69, ["https://soundcloud.com/pages/privacy"]);
+            ac(bel70, ["Wenn Sie unsere Seiten besuchen, wird nach Aktivierung des Plugin eine direkte Verbindung zwischen Ihrem Browser und dem SoundCloud-Server hergestellt. SoundCloud erhält dadurch die Information, dass Sie mit Ihrer IP-Adresse unsere Seite besucht haben. Wenn Sie den \"Like-Button\" oder \"Share-Button\" anklicken während Sie in Ihrem SoundCloud- Benutzerkonto eingeloggt sind, können Sie die Inhalte unserer Seiten mit Ihrem SoundCloud-Profil verlinken und/oder teilen. Dadurch kann SoundCloud Ihrem Benutzerkonto den Besuch unserer Seiten zuordnen. Wir weisen darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der übermittelten Daten sowie deren Nutzung durch SoundCloud erhalten. Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von SoundCloud unter: ", bel69]);
+            var bel71 = document.createElement("p");
+            ac(bel71, ["Wenn Sie nicht wünschen, dass Soundcloud den Besuch unserer Seiten Ihrem SoundCloud- Benutzerkonto zuordnet, loggen Sie sich bitte aus Ihrem SoundCloud-Benutzerkonto aus bevor Sie Inhalte des SoundCloud-Plugins aktivieren."]);
+            var bel72 = document.createElement("p");
+            ac(bel72, [" "]);
+            var bel73 = document.createElement("h2");
+            ac(bel73, ["Spotify"]);
+            var bel75 = document.createElement("p");
+            var bel74 = document.createElement("a");
+            bel74.setAttribute("href", "https://developer.spotify.com");
+            bel74.setAttribute("target", "_blank");
+            ac(bel74, ["https://developer.spotify.com"]);
+            ac(bel75, ["Auf unseren Seiten sind Funktionen des MusikDienstes Spotify eingebunden. Anbieter ist die Spotify AB, Birger Jarlsgatan 61, 113 56 Stockholm in Schweden. Die Spotify PlugIns erkennen Sie an dem grünen Logo auf unserer Seite. Eine übersicht über die Spotify-PlugIns finden Sie unter ", bel74]);
+            var bel76 = document.createElement("p");
+            ac(bel76, ["Dadurch kann beim Besuch unserer Seiten über das Plugin eine direkte Verbindung zwischen Ihrem Browser und dem Spotify-Server hergestellt werden. Spotify erhält dadurch die Information, dass Sie mit Ihrer IP-Adresse unsere Seite besucht haben. Wenn Sie den Spotify Button anklicken während Sie in Ihrem Spotify-Account eingeloggt sind, können Sie die Inhalte unserer Seiten auf Ihrem Spotify Profil verlinken. Dadurch kann Spotify den Besuch unserer Seiten Ihrem Benutzerkonto zuordnen."]);
+            var bel78 = document.createElement("p");
+            var bel77 = document.createElement("a");
+            bel77.setAttribute("href", "https://www.spotify.com/de/legal/privacy-policy/");
+            bel77.setAttribute("target", "_blank");
+            ac(bel77, ["https://www.spotify.com/de/legal/privacy-policy/"]);
+            ac(bel78, ["Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von Spotify: ", bel77]);
+            var bel79 = document.createElement("p");
+            ac(bel79, ["Wenn Sie nicht wünschen, dass Spotify den Besuch unserer Seiten Ihrem Spotify-Nutzerkonto zuordnen kann,\n                loggen Sie sich bitte aus Ihrem Spotify-Benutzerkonto aus."]);
+            var bel80 = document.createElement("p");
+            ac(bel80, [" "]);
+            var bel81 = document.createElement("h2");
+            ac(bel81, ["YouTube"]);
+            var bel82 = document.createElement("p");
+            ac(bel82, ["Unsere Website nutzt Plugins der von Google betriebenen Seite YouTube. Betreiber der Seiten ist die YouTube, LLC, 901 Cherry Ave., San Bruno, CA 94066, USA. Wenn Sie eine unserer mit einem YouTubePlugin ausgestatteten Seiten besuchen, wird eine Verbindung zu den Servern von YouTube hergestellt. Dabei wird dem Youtube-Server mitgeteilt, welche unserer Seiten Sie besucht haben."]);
+            var bel83 = document.createElement("p");
+            ac(bel83, ["Wenn Sie in Ihrem YouTube-Account eingeloggt sind ermöglichen Sie YouTube, Ihr Surfverhalten direkt Ihrem persönlichen Profil zuzuordnen. Dies können Sie verhindern, indem Sie sich aus Ihrem YouTube-Account ausloggen."]);
+            var bel85 = document.createElement("p");
+            var bel84 = document.createElement("a");
+            bel84.setAttribute("href", "https://www.google.de/intl/de/policies/privacy");
+            bel84.setAttribute("target", "_blank");
+            ac(bel84, ["https://www.google.de/intl/de/policies/privacy"]);
+            ac(bel85, ["Weitere Informationen zum Umgang von Nutzerdaten finden Sie in der Datenschutzerklärung von YouTube unter: ", bel84]);
+            var bel86 = document.createElement("p");
+            ac(bel86, [" "]);
+            var bel87 = document.createElement("h2");
+            ac(bel87, ["SSLVerschlüsselung"]);
+            var bel88 = document.createElement("p");
+            ac(bel88, ["Diese Seite nutzt aus Gründen der Sicherheit und zum Schutz der übertragung vertraulicher Inhalte, wie zum Beispiel der Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von \"http://\" auf \"https://\" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile."]);
+            var bel89 = document.createElement("p");
+            ac(bel89, ["Wenn die SSL Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden."]);
+            var bel90 = document.createElement("p");
+            ac(bel90, [" "]);
+            var bel91 = document.createElement("h2");
+            ac(bel91, ["Recht auf Auskunft, Löschung, Sperrung"]);
+            var bel92 = document.createElement("p");
+            ac(bel92, ["Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden."]);
+            var bel93 = document.createElement("p");
+            ac(bel93, [" "]);
+            var bel95 = document.createElement("p");
+            var bel94 = document.createElement("a");
+            bel94.setAttribute("href", "https://www.e-recht24.de/musterdatenschutzerklaerung.html");
+            ac(bel94, ["https://www.e-recht24.de/muster-datenschutzerklaerung.html"]);
+            ac(bel95, ["Quelle: ", bel94]);
+            ac(bel96, ["\n                ", bel0, "\n                ", bel1, "\n                ", bel2, "\n                ", bel3, "\n                ", bel4, "\n                ", bel5, "\n                ", bel6, " ", bel7, "\n                ", bel8, "\n                ", bel9, "\n                ", bel10, "\n                ", bel11, " ", bel12, "\n                ", bel18, " ", bel19, "\n                ", bel20, "\n                ", bel21, " ", bel22, "\n                ", bel23, "\n                ", bel24, " ", bel25, "\n                ", bel26, "\n                ", bel27, "\n                ", bel28, " ", bel29, "\n                ", bel30, "\n                ", bel32, "\n                ", bel33, "\n                ", bel35, "\n                ", bel37, "\n                ", bel39, "\n                ", bel41, "\n                ", bel43, "\n                ", bel44, "\n                ", bel45, " ", bel47, "\n                ", bel49, "\n                ", bel50, "\n                ", bel51, " ", bel52, "\n                ", bel53, "\n                ", bel54, "\n                ", bel55, "\n                ", bel56, "\n                ", bel57, " ", bel58, "\n                ", bel60, "\n                ", bel61, "\n                ", bel62, " ", bel63, "\n                ", bel65, "\n                ", bel66, "\n                ", bel67, " ", bel68, "\n                ", bel70, "\n                ", bel71, bel72, " ", bel73, " ", bel75, " ", bel76, " ", bel78, " ", bel79, bel80, " ", bel81, " ", bel82, " ", bel83, " ", bel85, bel86, " ", bel87, " ", bel88, " ", bel89, bel90, " ", bel91, " ", bel92, bel93, " ", bel95, "\n            "]);
+            ac(bel97, ["\n            ", arguments[1], "\n            ", bel96, "\n        "]);
+            return bel97;
         }(body, navigationView(state, emit));
     }
 
@@ -177,7 +406,7 @@
         if (!state.pages) {
             return function () {
                 var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
-                var bel6 = document.createElement("nav");
+                var bel7 = document.createElement("nav");
                 var bel1 = document.createElement("p");
                 var bel0 = document.createElement("span");
                 ac(bel0, ["Hi and welcome, i am Moszeed, from Germany. I love to write Code, to create Apps, Pages and Modules."]);
@@ -187,14 +416,17 @@
                 bel2["onclick"] = arguments[0];
                 ac(bel2, [".index"]);
                 ac(bel3, ["\n                    ", bel2, "\n                "]);
-                var bel5 = document.createElement("div");
-                bel5.setAttribute("id", "impressum");
+                var bel6 = document.createElement("div");
+                bel6.setAttribute("id", "impressum");
                 var bel4 = document.createElement("a");
                 bel4.setAttribute("href", "#impressum");
                 ac(bel4, ["Impressum"]);
-                ac(bel5, ["\n                    ", bel4, "\n                "]);
-                ac(bel6, ["\n                ", bel1, "\n                ", bel3, "\n                ", bel5, "\n            "]);
-                return bel6;
+                var bel5 = document.createElement("a");
+                bel5.setAttribute("href", "#datenschutz");
+                ac(bel5, ["Datenschutz"]);
+                ac(bel6, ["\n                    ", bel4, "\n                    ", bel5, "\n                "]);
+                ac(bel7, ["\n                ", bel1, "\n                ", bel3, "\n                ", bel6, "\n            "]);
+                return bel7;
             }(backToList);
         }
 
@@ -269,19 +501,22 @@
 
         return function () {
             var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
-            var bel4 = document.createElement("nav");
+            var bel5 = document.createElement("nav");
             var bel1 = document.createElement("p");
             var bel0 = document.createElement("span");
             ac(bel0, ["Hi and welcome, i am Moszeed, from Germany. I love to write Code, to create Apps, Pages and Modules."]);
             ac(bel1, [bel0]);
-            var bel3 = document.createElement("div");
-            bel3.setAttribute("id", "impressum");
+            var bel4 = document.createElement("div");
+            bel4.setAttribute("id", "impressum");
             var bel2 = document.createElement("a");
             bel2.setAttribute("href", "#impressum");
             ac(bel2, ["Impressum"]);
-            ac(bel3, ["\n                ", bel2, "\n            "]);
-            ac(bel4, ["\n            ", bel1, "\n            ", arguments[0], "\n            ", bel3, "\n        "]);
-            return bel4;
+            var bel3 = document.createElement("a");
+            bel3.setAttribute("href", "#datenschutz");
+            ac(bel3, ["Datenschutz"]);
+            ac(bel4, ["\n                ", bel2, "\n                ", bel3, "\n            "]);
+            ac(bel5, ["\n            ", bel1, "\n            ", arguments[0], "\n            ", bel4, "\n        "]);
+            return bel5;
         }($projectList);
 
         function backToList() {
@@ -357,14 +592,9 @@
     function mainView(state, emit) {
         var $social = function () {
             var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
-            var bel1 = document.createElement("section");
-            var bel0 = document.createElement("iframe");
-            bel0.setAttribute("src", "https://www.juicer.io/api/feeds/moszeed/iframe");
-            bel0.setAttribute("frameborder", "0");
-            bel0.setAttribute("width", "100%");
-            bel0.setAttribute("height", "100%");
-            ac(bel1, ["\n            ", bel0, "\n        "]);
-            return bel1;
+            var bel0 = document.createElement("section");
+            ac(bel0, ["\n\n        "]);
+            return bel0;
         }();
 
         return function () {
@@ -11109,14 +11339,15 @@ function Wayfarer(dft) {
 
   // define a route
   // (str, fn) -> obj
-  function on(route, cb) {
+  function on(route, fn) {
     assert.equal(typeof route === 'undefined' ? 'undefined' : _typeof(route), 'string');
-    assert.equal(typeof cb === 'undefined' ? 'undefined' : _typeof(cb), 'function');
+    assert.equal(typeof fn === 'undefined' ? 'undefined' : _typeof(fn), 'function');
 
+    var cb = fn._wayfarer && fn._trie ? fn : proxy;
     route = route || '/';
     cb.route = route;
 
-    if (cb && cb._wayfarer && cb._trie) {
+    if (cb._wayfarer && cb._trie) {
       _trie.mount(route, cb._trie.trie);
     } else {
       var node = _trie.create(route);
@@ -11124,6 +11355,10 @@ function Wayfarer(dft) {
     }
 
     return emit;
+
+    function proxy() {
+      return fn.apply(this, Array.prototype.slice.call(arguments));
+    }
   }
 
   // match and call a route
