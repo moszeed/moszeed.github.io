@@ -16,6 +16,10 @@
 + [Darktable](https://www.darktable.org/) - Darktable is like "Lightroom"
 + [GIMP](https://www.gimp.org/) - GNU IMAGE MANIPULATION PROGRAM
 
+## Video Editing
++ [HitFilm Express](https://fxhome.com/express) - HitFilm Express
++ [Shotcut](https://www.shotcut.org/) - "Shotcut is a free, open source, cross-platform video editor."
+
 ## 3D Modelling
 + [MagicaVoxel](https://ephtracy.github.io) - a 8-bit voxel art editor and interactive path tracing renderer
 + [Blender](https://www.blender.org) - a free and open source 3D creation suite
