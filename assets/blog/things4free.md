@@ -20,6 +20,9 @@
 + [HitFilm Express](https://fxhome.com/express) - HitFilm Express
 + [Shotcut](https://www.shotcut.org/) - "Shotcut is a free, open source, cross-platform video editor."
 
+## 3D Animation
++ [Tooll2](http://tooll.io/) - Tooll2 is an free open source solution for creating interactive 3d content and animations.
+
 ## 3D Modelling
 + [MagicaVoxel](https://ephtracy.github.io) - a 8-bit voxel art editor and interactive path tracing renderer
 + [Blender](https://www.blender.org) - a free and open source 3D creation suite
