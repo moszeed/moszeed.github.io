@@ -15,6 +15,7 @@
 + [Gravit](https://gravit.io/) - Gravit is like "Sketch" or "Illustrator"
 + [Darktable](https://www.darktable.org/) - Darktable is like "Lightroom"
 + [GIMP](https://www.gimp.org/) - GNU IMAGE MANIPULATION PROGRAM
++ [Inkscape](https://inkscape.org) - Inkscape is a professional vector graphics editor for Windows, Mac OS X and Linux. It's free and open source.
 
 ## Video Editing
 + [HitFilm Express](https://fxhome.com/express) - HitFilm Express
@@ -29,6 +30,9 @@
 
 ## Music
 + [LMMS](https://lmms.io/) - a Tracker like Renoise, but complete free and Open Source
+
+## Photography
++ [PureRef](https://www.pureref.com/) - The simple way to view and organize your reference images.
 
 ## Terminals
 + [cmder](http://cmder.net/) - Console Emulator (Win) based on ConEmu
