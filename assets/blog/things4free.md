@@ -30,6 +30,7 @@
 
 ## Music
 + [LMMS](https://lmms.io/) - a Tracker like Renoise, but complete free and Open Source
++ [Mixxx](https://www.mixxx.org/) - Free and open source DJ software for Windows, macOS, and Linux
 
 ## Photography
 + [PureRef](https://www.pureref.com/) - The simple way to view and organize your reference images.
