@@ -20,6 +20,7 @@
 ## Video Editing
 + [HitFilm Express](https://fxhome.com/express) - HitFilm Express
 + [Shotcut](https://www.shotcut.org/) - "Shotcut is a free, open source, cross-platform video editor."
++ [DaVinCi Resolve](https://www.blackmagicdesign.com/de/products/davinciresolve/) - "Revolutionary tools for editing, color correction, audio post and now visual effects, all in a single application"
 
 ## 3D Animation
 + [Tooll2](http://tooll.io/) - Tooll2 is an free open source solution for creating interactive 3d content and animations.
