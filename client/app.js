@@ -35,7 +35,7 @@
         }
 
         h2 {
-            background-color: #E7F2D2;
+            background-color: #eeeeee;
             padding: 8px;
             margin-top: 30px;
             font-size: 120%;
@@ -45,6 +45,7 @@
             color: #EFEFEF;
             background-color: #121212;
             padding: 10px;
+            font-size: 90%;
         }
 
         nav p {
@@ -423,6 +424,10 @@
             .filter((key) => state.pages[key].type === 'unity')
             .map((key) => html`<li onclick=${() => openBlogPage(key)}>.${state.pages[key].name}</li>`);
 
+        const $drawing = Object.keys(state.pages)
+            .filter((key) => state.pages[key].type === 'drawing')
+            .map((key) => html`<li onclick=${() => openBlogPage(key)}>.${state.pages[key].name}</li>`);
+
         const $other = Object.keys(state.pages)
             .filter((key) => state.pages[key].type === 'other')
             .map((key) => html`<li onclick=${() => openBlogPage(key)}>.${state.pages[key].name}</li>`);
@@ -434,6 +439,10 @@
             <h4>.projects</h4>
             <ul class="project">
                 ${$projects}
+            </ul>
+            <h4>.drawing</h4>
+            <ul class="project">
+                ${$drawing}
             </ul>
             <h4>.unity</h4>
             <ul class="project">

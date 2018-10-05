@@ -1,14 +1,13 @@
 {
     "presets": [
-        ["env", {
-            "useBuiltIns": true,
+        ["@babel/preset-env", {
+            "useBuiltIns": "entry",
             "modules"    : false
         }]
     ],
     "plugins": [
-        ["babel-plugin-transform-builtin-extend", {
-            globals    : ["Error", "Array"],
-            approximate: true
-        }]
+        "@babel/plugin-transform-arrow-functions",
+        "@babel/plugin-transform-classes"
     ]
 }
+

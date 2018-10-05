@@ -1,7 +1,7 @@
 #! bin/bash
 [[ -d ./dist/js/ ]] || mkdir ./dist/js/
 
-GLOBALS="-t sheetify -g babelify -t [ yo-yoify ]"
+GLOBALS="-t sheetify -g [ babelify --configFile "./.babelrc" ] -t [ yo-yoify ]"
 PLUGINS=""
 
 watchify ./client/app.js --poll 500 ${GLOBALS} \
