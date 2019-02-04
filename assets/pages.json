@@ -59,7 +59,8 @@
         "type"       : "other",
         "name"       : "GameRemakes",
         "created"    : "04. Feburar 2019",
-        "description": "a list of Game Remakes (Free and with need of Original Game)"
+        "description": "a list of Game Remakes (Free and with need of Original Game)",
+        "link"       : "./assets/blog/opensourcegameremakes.md"
     }
 }
 
