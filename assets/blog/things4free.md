@@ -31,6 +31,7 @@
 
 ## Music
 + [LMMS](https://lmms.io/) - a Tracker like Renoise, but complete free and Open Source
++ [AudaCity](https://www.audacityteam.org/) -  Free, open source, cross-platform audio software Audacity is an easy-to-use, multi-track audio editor and recorder
 + [Mixxx](https://www.mixxx.org/) - Free and open source DJ software for Windows, macOS, and Linux
 
 ## Photography
