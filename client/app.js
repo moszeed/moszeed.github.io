@@ -6,6 +6,11 @@
     const choo = require('choo');
     const markdown = require('markdown-it')();
 
+    const collator = new Intl.Collator(undefined, {
+        numeric    : true,
+        sensitivity: 'base'
+    });
+
     const body = css`
         @import url('https://fonts.googleapis.com/css?family=Roboto');
 
@@ -72,30 +77,6 @@
 
         nav section {
             padding: 40px 20px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        ul li span.created {
-            font-weight: bold;
-            width: 140px;
-            display: inline-block;
-            padding: 10px;
-            background-color: #DEDEDE;
-        }
-
-        ul li div.name {
-            margin-left: 20px;
-            font-weight: bold;
-        }
-
-        ul li div.description {
-            font-size: 90%;
-            margin-left: 20px;
         }
 
         nav ul.project {
@@ -178,7 +159,7 @@
             overflow: auto;
             box-shadow: 4px 0px 6px inset #333333;
             display: grid;
-            grid-template-columns: auto 500px;
+            grid-template-columns: auto 300px;
             grid-template-rows: auto;
             font-size: 90%;
         }
@@ -224,6 +205,46 @@
             height: calc(100% + 65px);
         }
 
+        #posts .post {
+            display: flex;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #dedede;
+        }
+
+        #posts .post:hover {
+            background-color: #dedede;
+            cursor: pointer;
+        }
+
+        #posts .post div {
+            flex-grow: 1;
+            flex-shrink: 1;
+            text-align: left;
+            vertical-align: bottom;
+        }
+
+        #posts .post div.created {
+            background-color: #ededed;
+            padding: 8px 4px 0 8px;
+            flex-basis: 135px;
+            flex-grow: 0;
+            flex-shrink: 0;
+            margin-right: 10px;
+            letter-spacing: 1px;
+        }
+
+        #posts .post div.subtype {
+            flex-basis: 80px;
+        }
+
+        #posts .post div.name {
+            font-size: 120%;
+        }
+
+        #posts .post div.description {
+            color: #404040;
+            padding-bottom: 8px;
+        }
     `;
 
     const app = choo();
@@ -379,7 +400,11 @@
             </body>`;
         }
 
-        let postItem = state.posts[state.params.post] || state.pages[state.params.post];
+        let postItem = state.posts.find((post) => post.key === state.params.post);
+        if (!postItem) {
+            postItem = state.pages[state.params.post];
+        }
+
         let $externalContent = html`<div></div>`;
 
         if (state.openPage !== state.params.post) {
@@ -480,34 +505,23 @@
         if (!state.posts) {
             return '';
         }
-        const reversedPostsKeys = Object.keys(state.posts).reverse();
-        const $liGroups = reversedPostsKeys.reduce((store, key) => {
-            let postItem = state.posts[key];
-            if (postItem) {
-                if (!postItem.subtype) postItem.subtype = 'default';
-                if (!store[postItem.subtype]) store[postItem.subtype] = [];
 
-                let $li = html`
-                <li onclick=${() => setOpenPage(key)}>
-                    <span class="created">${postItem.created}</span>
-                    <span>
-                        <div class="name">${postItem.name}</div>
-                        <div class="description">${postItem.description}</div>
-                    </span>
-                </li>`;
+        const sortedPosts = state.posts.sort((a, b) =>
+            collator.compare(Date.parse(b.created), Date.parse(a.created)));
 
-                store[postItem.subtype].push($li);
-            }
+        const $liGroups = sortedPosts.map((postItem) => {
+            const subType = postItem.subtype ? `[${postItem.subtype}] ` : '';
+            return html`<div class="post" onclick=${() => setOpenPage(postItem.key)}>
+                <div class="created">${new Date(postItem.created).toLocaleDateString(undefined, { day: '2-digit', month: 'long', year: 'numeric' })}</div>
+                <div>
+                    <div class="name">${subType}${postItem.name}</div>
+                    <div class="description">${postItem.description}</div>
+                </div>
+            </div>`;
+        });
 
-            return store;
-        }, {});
+        return html`<div id="posts">${$liGroups}</div>`;
 
-        return html`<div>
-            <ul>${$liGroups.default}</ul>
-            <hr>
-            <h5>PHP</h5>
-            <ul>${$liGroups.php}</ul>
-        </div>`;
 
         function setOpenPage (key) {
             emit('pushState', `#blog/${key}`);

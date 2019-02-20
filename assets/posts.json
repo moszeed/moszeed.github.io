@@ -1,31 +1,40 @@
-{
-    "jsconfeu2013recap": {
+[
+    {
+        "key"        : "jsconfeu2013recap",
         "type"       : "blog",
         "name"       : "JSConf EU 2013",
-        "created"    : "18. August 2013",
+        "created"    : "2013-08-18",
         "description": "a collection of videos from jsconfeu 2013",
         "link"       : "./assets/blog/jsconfeu2013recap.md"
-    },
-    "rejectjs2013recap": {
+    }, {
+        "key"        : "rejectjs2013recap",
         "type"       : "blog",
         "name"       : "Reject.js 2013",
-        "created"    : "18. August 2013",
+        "created"    : "2013-08-18",
         "description": "a collection of videos from rejectjs 2013",
         "link"       : "./assets/blog/rejectjs2013recap.md"
-    },
-    "npmasbuildtool": {
+    }, {
+        "key"        : "npmasbuildtool",
         "type"       : "blog",
-        "name"       : "NPM Scripts (German)",
-        "created"    : "29. Mai 2016",
+        "name"       : "NPM Scripts 🇩🇪",
+        "created"    : "2016-05-29",
         "description": "how to use the \"scripts\" in npm",
         "link"       : "./assets/blog/npmasbuildtool.md"
-    },
-    "practicalphparrayfunctions": {
+    }, {
+        "key"        : "practicalphparrayfunctions",
         "type"       : "blog",
         "subtype"    : "php",
-        "name"       : "Practical PHP Array Functions (German)",
-        "created"    : "03. August 2016",
+        "name"       : "Practical PHP Array Functions 🇩🇪",
+        "created"    : "2016-08-03",
         "description": "some dev-life saving PHP Array functions",
         "link"       : "./assets/blog/practicalphparrayfunctions.md"
+    }, {
+        "key"        : "jsinternationalizationapi",
+        "type"       : "blog",
+        "subtype"    : "js",
+        "name"       : ".sort und die 'Internationalization Api' 🇩🇪",
+        "created"    : "2019-02-20",
+        "description": "sorting with the internationalization api",
+        "link"       : "./assets/blog/jsinternationalizationapi.md"
     }
-}
+]
