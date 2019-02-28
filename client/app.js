@@ -53,6 +53,11 @@
             font-size: 90%;
         }
 
+        nav.menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
         nav p {
             letter-spacing: 1px;
             font-size: 80%;
@@ -205,6 +210,13 @@
             height: calc(100% + 65px);
         }
 
+        main.externalLink iframe {
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            border: 0;
+        }
+
         #posts .post {
             display: flex;
             margin-bottom: 8px;
@@ -268,6 +280,7 @@
     app.route('#datenschutz', datenschutzView);
     app.route('#blog/:post', blogPostView);
     app.route('#pages/:page', githubProjectView);
+    app.route('#link/:page', iframeLinkView);
 
     app.mount('body');
 
@@ -351,6 +364,24 @@
                 <p>Wenn Sie unsere Seiten besuchen, wird nach Aktivierung des Plugin eine direkte Verbindung zwischen Ihrem Browser und dem SoundCloud-Server hergestellt. SoundCloud erhält dadurch die Information, dass Sie mit Ihrer IP-Adresse unsere Seite besucht haben. Wenn Sie den "Like-Button" oder "Share-Button" anklicken während Sie in Ihrem SoundCloud- Benutzerkonto eingeloggt sind, können Sie die Inhalte unserer Seiten mit Ihrem SoundCloud-Profil verlinken und/oder teilen. Dadurch kann SoundCloud Ihrem Benutzerkonto den Besuch unserer Seiten zuordnen. Wir weisen darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der übermittelten Daten sowie deren Nutzung durch SoundCloud erhalten. Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von SoundCloud unter: <a href="https://soundcloud.com/pages/privacy" target="_blank">https://soundcloud.com/pages/privacy</a></p>
                 <p>Wenn Sie nicht wünschen, dass Soundcloud den Besuch unserer Seiten Ihrem SoundCloud- Benutzerkonto zuordnet, loggen Sie sich bitte aus Ihrem SoundCloud-Benutzerkonto aus bevor Sie Inhalte des SoundCloud-Plugins aktivieren.</p><p> </p> <h2>Spotify</h2> <p>Auf unseren Seiten sind Funktionen des MusikDienstes Spotify eingebunden. Anbieter ist die Spotify AB, Birger Jarlsgatan 61, 113 56 Stockholm in Schweden. Die Spotify PlugIns erkennen Sie an dem grünen Logo auf unserer Seite. Eine übersicht über die Spotify-PlugIns finden Sie unter <a href="https://developer.spotify.com" target="_blank">https://developer.spotify.com</a></p> <p>Dadurch kann beim Besuch unserer Seiten über das Plugin eine direkte Verbindung zwischen Ihrem Browser und dem Spotify-Server hergestellt werden. Spotify erhält dadurch die Information, dass Sie mit Ihrer IP-Adresse unsere Seite besucht haben. Wenn Sie den Spotify Button anklicken während Sie in Ihrem Spotify-Account eingeloggt sind, können Sie die Inhalte unserer Seiten auf Ihrem Spotify Profil verlinken. Dadurch kann Spotify den Besuch unserer Seiten Ihrem Benutzerkonto zuordnen.</p> <p>Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von Spotify: <a href="https://www.spotify.com/de/legal/privacy-policy/" target="_blank">https://www.spotify.com/de/legal/privacy-policy/</a></p> <p>Wenn Sie nicht wünschen, dass Spotify den Besuch unserer Seiten Ihrem Spotify-Nutzerkonto zuordnen kann,
                 loggen Sie sich bitte aus Ihrem Spotify-Benutzerkonto aus.</p><p> </p> <h2>YouTube</h2> <p>Unsere Website nutzt Plugins der von Google betriebenen Seite YouTube. Betreiber der Seiten ist die YouTube, LLC, 901 Cherry Ave., San Bruno, CA 94066, USA. Wenn Sie eine unserer mit einem YouTubePlugin ausgestatteten Seiten besuchen, wird eine Verbindung zu den Servern von YouTube hergestellt. Dabei wird dem Youtube-Server mitgeteilt, welche unserer Seiten Sie besucht haben.</p> <p>Wenn Sie in Ihrem YouTube-Account eingeloggt sind ermöglichen Sie YouTube, Ihr Surfverhalten direkt Ihrem persönlichen Profil zuzuordnen. Dies können Sie verhindern, indem Sie sich aus Ihrem YouTube-Account ausloggen.</p> <p>Weitere Informationen zum Umgang von Nutzerdaten finden Sie in der Datenschutzerklärung von YouTube unter: <a href="https://www.google.de/intl/de/policies/privacy" target="_blank">https://www.google.de/intl/de/policies/privacy</a></p><p> </p> <h2>SSLVerschlüsselung</h2> <p>Diese Seite nutzt aus Gründen der Sicherheit und zum Schutz der übertragung vertraulicher Inhalte, wie zum Beispiel der Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von "http://" auf "https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.</p> <p>Wenn die SSL Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.</p><p> </p> <h2>Recht auf Auskunft, Löschung, Sperrung</h2> <p>Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden.</p><p> </p> <p>Quelle: <a href="https://www.e-recht24.de/musterdatenschutzerklaerung.html">https://www.e-recht24.de/muster-datenschutzerklaerung.html</a></p>
+            </main>
+        </body>`;
+    }
+
+    function iframeLinkView (state, emit) {
+        if (!state.pages) {
+            return html`<body class=${body}>
+                ${navigationView(state, emit)}
+                <main class="blog"></main>
+            </body>`;
+        }
+
+        let pageItem = state.pages[state.params.page];
+
+        return html`<body class=${body}>
+            ${navigationView(state, emit)}
+            <main class="externalLink">
+                <iframe src="${pageItem.link}">
             </main>
         </body>`;
     }
@@ -441,6 +472,10 @@
             </nav>`;
         }
 
+        const $pages = Object.keys(state.pages)
+            .filter((key) => state.pages[key].type === 'link')
+            .map((key) => html`<li onclick=${() => openIFrameLink(key)}>.${state.pages[key].name}</li>`);
+
         const $projects = Object.keys(state.pages)
             .filter((key) => state.pages[key].type === 'github')
             .map((key) => html`<li onclick=${() => setOpenPage(key)}>.${state.pages[key].name}</li>`);
@@ -461,6 +496,9 @@
             <ul>
                 <li onclick=${backToList}>.index</li>
             </ul>
+            <ul class="pages">
+                ${$pages}
+            </ul>
             <h4>.projects</h4>
             <ul class="project">
                 ${$projects}
@@ -479,7 +517,7 @@
             </ul>
         </section>`;
 
-        return html`<nav>
+        return html`<nav class="menu">
             <p><span>Hi and welcome, i am Moszeed, from Germany. I love to write Code, to create Apps, Pages and Modules.</span></p>
             ${$projectList}
             <div id="impressum">
@@ -490,6 +528,10 @@
 
         function backToList () {
             emit('pushState', `/`);
+        }
+
+        function openIFrameLink (key) {
+            emit('pushState', `#link/${key}`);
         }
 
         function setOpenPage (key) {

@@ -13,7 +13,7 @@
     numeric: true,
     sensitivity: 'base'
   });
-  var body = (require('sheetify/insert')("@import url('https://fonts.googleapis.com/css?family=Roboto');\n\n        ._91b0d66d {\n            display: grid;\n            grid-template-columns: 300px auto;\n            grid-template-rows: auto;\n        }\n\n        html, body {\n            padding: 0;\n            margin: 0;\n            width: 100%;\n            height: 100%;\n            overflow: hidden;\n            font-size: 1em;\n            font-family: 'Roboto', sans-serif;\n        }\n\n        h1 {\n            background-color: #1E1E1ECC;\n            border-bottom: 1px solid;\n            padding: 16px;\n            margin: 0;\n            letter-spacing: 1px;\n            color: #FEFEFE;\n        }\n\n        h2 {\n            background-color: #eeeeee;\n            padding: 8px;\n            margin-top: 30px;\n            font-size: 120%;\n        }\n\n        nav {\n            color: #EFEFEF;\n            background-color: #121212;\n            padding: 10px;\n            font-size: 90%;\n        }\n\n        nav p {\n            letter-spacing: 1px;\n            font-size: 80%;\n            padding: 20px;\n            background-color: #868585E6;\n            border-radius: 100%;\n            height: 50px;\n            width: 50px;\n            position: relative;\n        }\n\n        nav p span {\n            position:absolute;\n            left: 20px;\n            top: 20px;\n            width: 240px;\n        }\n\n        nav h4 {\n            margin-bottom: 4px;\n        }\n\n        nav section {\n            padding: 40px 20px;\n        }\n\n        nav ul.project {\n            margin-left: 10px;\n        }\n\n        nav hr {\n            border: 1px solid #363636;\n        }\n\n        nav ul li {\n            color: #EFEFEF;\n            text-transform: lowercase;\n            margin-bottom: 8px;\n            margin-top: 8px;\n        }\n\n        main section ul li {\n            display: grid;\n            grid-template-columns: 170px auto;\n            margin-bottom: 8px;\n        }\n\n        main section ul li:hover {\n            cursor: pointer;\n            background-color: #D4D4D4;\n        }\n\n        nav ul li.firstItem {\n            margin-bottom: 8px;\n        }\n\n        nav ul li:hover {\n            cursor: pointer;\n            text-decoration: underline;\n        }\n\n        #impressum {\n            position: absolute;\n            left: 20px;\n            bottom: 10px;\n            border-top: 1px solid #393939;\n        }\n\n        #impressum a {\n            color: #626262;\n            font-size: 12px;\n            text-decoration: none;\n            margin-right:10px;\n        }\n\n        pre {\n            font-family: \"Courier 10 Pitch\", Courier, monospace;\n            font-size: 95%;\n            line-height: 140%;\n            white-space: pre;\n            white-space: pre-wrap;\n            white-space: -moz-pre-wrap;\n            white-space: -o-pre-wrap;\n            background: #262626;\n            color: #E1E2A4;\n            padding: 16px;\n            max-height: 300px;\n            overflow: auto;\n        }\n\n        code {\n            font-family: Monaco, Consolas, \"Andale Mono\", \"DejaVu Sans Mono\", monospace;\n            font-size: 95%;\n            line-height: 140%;\n            white-space: pre;\n            white-space: pre-wrap;\n            white-space: -moz-pre-wrap;\n            white-space: -o-pre-wrap;\n        }\n\n        main {\n            background-color: #FEFEFE;\n            padding: 20px;\n            overflow: auto;\n            box-shadow: 4px 0px 6px inset #333333;\n            display: grid;\n            grid-template-columns: auto 300px;\n            grid-template-rows: auto;\n            font-size: 90%;\n        }\n\n        main section {\n            overflow: auto;\n            padding: 10px;\n        }\n\n        main.blog {\n            display: block;\n            padding: 5% 10%;\n        }\n\n        main.blog ul li {\n            padding: 2px 10px 2px 10px;\n        }\n\n        main.blog section.external {\n            padding: 20px;\n        }\n\n        @media (max-width: 1100px) {\n            main {\n                display: block;\n            }\n        }\n\n        @media (max-width: 900px) {\n            ._91b0d66d {\n                display: block;\n                overflow: auto;\n            }\n\n            nav ul li{\n                display: inline-flex;\n                margin-right: 16px;\n            }\n        }\n\n        iframe {\n            margin-top: -65px;\n            height: calc(100% + 65px);\n        }\n\n        #posts .post {\n            display: flex;\n            margin-bottom: 8px;\n            border-bottom: 1px solid #dedede;\n        }\n\n        #posts .post:hover {\n            background-color: #dedede;\n            cursor: pointer;\n        }\n\n        #posts .post div {\n            flex-grow: 1;\n            flex-shrink: 1;\n            text-align: left;\n            vertical-align: bottom;\n        }\n\n        #posts .post div.created {\n            background-color: #ededed;\n            padding: 8px 4px 0 8px;\n            flex-basis: 135px;\n            flex-grow: 0;\n            flex-shrink: 0;\n            margin-right: 10px;\n            letter-spacing: 1px;\n        }\n\n        #posts .post div.subtype {\n            flex-basis: 80px;\n        }\n\n        #posts .post div.name {\n            font-size: 120%;\n        }\n\n        #posts .post div.description {\n            color: #404040;\n            padding-bottom: 8px;\n        }") || true) && "_91b0d66d";
+  var body = (require('sheetify/insert')("@import url('https://fonts.googleapis.com/css?family=Roboto');\n\n        ._95161ec0 {\n            display: grid;\n            grid-template-columns: 300px auto;\n            grid-template-rows: auto;\n        }\n\n        html, body {\n            padding: 0;\n            margin: 0;\n            width: 100%;\n            height: 100%;\n            overflow: hidden;\n            font-size: 1em;\n            font-family: 'Roboto', sans-serif;\n        }\n\n        h1 {\n            background-color: #1E1E1ECC;\n            border-bottom: 1px solid;\n            padding: 16px;\n            margin: 0;\n            letter-spacing: 1px;\n            color: #FEFEFE;\n        }\n\n        h2 {\n            background-color: #eeeeee;\n            padding: 8px;\n            margin-top: 30px;\n            font-size: 120%;\n        }\n\n        nav {\n            color: #EFEFEF;\n            background-color: #121212;\n            padding: 10px;\n            font-size: 90%;\n        }\n\n        nav.menu ul {\n            list-style: none;\n            padding: 0;\n        }\n\n        nav p {\n            letter-spacing: 1px;\n            font-size: 80%;\n            padding: 20px;\n            background-color: #868585E6;\n            border-radius: 100%;\n            height: 50px;\n            width: 50px;\n            position: relative;\n        }\n\n        nav p span {\n            position:absolute;\n            left: 20px;\n            top: 20px;\n            width: 240px;\n        }\n\n        nav h4 {\n            margin-bottom: 4px;\n        }\n\n        nav section {\n            padding: 40px 20px;\n        }\n\n        nav ul.project {\n            margin-left: 10px;\n        }\n\n        nav hr {\n            border: 1px solid #363636;\n        }\n\n        nav ul li {\n            color: #EFEFEF;\n            text-transform: lowercase;\n            margin-bottom: 8px;\n            margin-top: 8px;\n        }\n\n        main section ul li {\n            display: grid;\n            grid-template-columns: 170px auto;\n            margin-bottom: 8px;\n        }\n\n        main section ul li:hover {\n            cursor: pointer;\n            background-color: #D4D4D4;\n        }\n\n        nav ul li.firstItem {\n            margin-bottom: 8px;\n        }\n\n        nav ul li:hover {\n            cursor: pointer;\n            text-decoration: underline;\n        }\n\n        #impressum {\n            position: absolute;\n            left: 20px;\n            bottom: 10px;\n            border-top: 1px solid #393939;\n        }\n\n        #impressum a {\n            color: #626262;\n            font-size: 12px;\n            text-decoration: none;\n            margin-right:10px;\n        }\n\n        pre {\n            font-family: \"Courier 10 Pitch\", Courier, monospace;\n            font-size: 95%;\n            line-height: 140%;\n            white-space: pre;\n            white-space: pre-wrap;\n            white-space: -moz-pre-wrap;\n            white-space: -o-pre-wrap;\n            background: #262626;\n            color: #E1E2A4;\n            padding: 16px;\n            max-height: 300px;\n            overflow: auto;\n        }\n\n        code {\n            font-family: Monaco, Consolas, \"Andale Mono\", \"DejaVu Sans Mono\", monospace;\n            font-size: 95%;\n            line-height: 140%;\n            white-space: pre;\n            white-space: pre-wrap;\n            white-space: -moz-pre-wrap;\n            white-space: -o-pre-wrap;\n        }\n\n        main {\n            background-color: #FEFEFE;\n            padding: 20px;\n            overflow: auto;\n            box-shadow: 4px 0px 6px inset #333333;\n            display: grid;\n            grid-template-columns: auto 300px;\n            grid-template-rows: auto;\n            font-size: 90%;\n        }\n\n        main section {\n            overflow: auto;\n            padding: 10px;\n        }\n\n        main.blog {\n            display: block;\n            padding: 5% 10%;\n        }\n\n        main.blog ul li {\n            padding: 2px 10px 2px 10px;\n        }\n\n        main.blog section.external {\n            padding: 20px;\n        }\n\n        @media (max-width: 1100px) {\n            main {\n                display: block;\n            }\n        }\n\n        @media (max-width: 900px) {\n            ._95161ec0 {\n                display: block;\n                overflow: auto;\n            }\n\n            nav ul li{\n                display: inline-flex;\n                margin-right: 16px;\n            }\n        }\n\n        iframe {\n            margin-top: -65px;\n            height: calc(100% + 65px);\n        }\n\n        main.externalLink iframe {\n            margin: 0;\n            height: 100%;\n            width: 100%;\n            border: 0;\n        }\n\n        #posts .post {\n            display: flex;\n            margin-bottom: 8px;\n            border-bottom: 1px solid #dedede;\n        }\n\n        #posts .post:hover {\n            background-color: #dedede;\n            cursor: pointer;\n        }\n\n        #posts .post div {\n            flex-grow: 1;\n            flex-shrink: 1;\n            text-align: left;\n            vertical-align: bottom;\n        }\n\n        #posts .post div.created {\n            background-color: #ededed;\n            padding: 8px 4px 0 8px;\n            flex-basis: 135px;\n            flex-grow: 0;\n            flex-shrink: 0;\n            margin-right: 10px;\n            letter-spacing: 1px;\n        }\n\n        #posts .post div.subtype {\n            flex-basis: 80px;\n        }\n\n        #posts .post div.name {\n            font-size: 120%;\n        }\n\n        #posts .post div.description {\n            color: #404040;\n            padding-bottom: 8px;\n        }") || true) && "_95161ec0";
   var app = choo();
   app.use(function (state, emitter) {
     state.openPage = null;
@@ -31,6 +31,7 @@
   app.route('#datenschutz', datenschutzView);
   app.route('#blog/:post', blogPostView);
   app.route('#pages/:page', githubProjectView);
+  app.route('#link/:page', iframeLinkView);
   app.mount('body');
 
   function getGithubReadme(path) {
@@ -307,6 +308,37 @@
     }(body, navigationView(state, emit));
   }
 
+  function iframeLinkView(state, emit) {
+    if (!state.pages) {
+      return function () {
+        var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
+
+        var bel1 = document.createElement("body");
+        bel1.setAttribute("class", arguments[0]);
+        var bel0 = document.createElement("main");
+        bel0.setAttribute("class", "blog");
+        ac(bel1, ["\n                ", arguments[1], "\n                ", bel0, "\n            "]);
+        return bel1;
+      }(body, navigationView(state, emit));
+    }
+
+    var pageItem = state.pages[state.params.page];
+    return function () {
+      var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
+
+      var bel2 = document.createElement("body");
+      bel2.setAttribute("class", arguments[1]);
+      var bel1 = document.createElement("main");
+      bel1.setAttribute("class", "externalLink");
+      var bel0 = document.createElement("iframe");
+      bel0.setAttribute("src", arguments[0]);
+      ac(bel0, ["\n            "]);
+      ac(bel1, ["\n                ", bel0, "\n        "]);
+      ac(bel2, ["\n            ", arguments[2], "\n            ", bel1]);
+      return bel2;
+    }(pageItem.link, body, navigationView(state, emit));
+  }
+
   function githubProjectView(state, emit) {
     if (!state.pages) {
       return function () {
@@ -448,6 +480,20 @@
       }(backToList);
     }
 
+    var $pages = Object.keys(state.pages).filter(function (key) {
+      return state.pages[key].type === 'link';
+    }).map(function (key) {
+      return function () {
+        var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
+
+        var bel0 = document.createElement("li");
+        bel0["onclick"] = arguments[0];
+        ac(bel0, [".", arguments[1]]);
+        return bel0;
+      }(function () {
+        return openIFrameLink(key);
+      }, state.pages[key].name);
+    });
     var $projects = Object.keys(state.pages).filter(function (key) {
       return state.pages[key].type === 'github';
     }).map(function (key) {
@@ -508,40 +554,44 @@
     var $projectList = function () {
       var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
 
-      var bel10 = document.createElement("section");
+      var bel11 = document.createElement("section");
       var bel1 = document.createElement("ul");
       var bel0 = document.createElement("li");
       bel0["onclick"] = arguments[0];
       ac(bel0, [".index"]);
       ac(bel1, ["\n                ", bel0, "\n            "]);
-      var bel2 = document.createElement("h4");
-      ac(bel2, [".projects"]);
-      var bel3 = document.createElement("ul");
-      bel3.setAttribute("class", "project");
-      ac(bel3, ["\n                ", arguments[1], "\n            "]);
-      var bel4 = document.createElement("h4");
-      ac(bel4, [".drawing"]);
-      var bel5 = document.createElement("ul");
-      bel5.setAttribute("class", "project");
-      ac(bel5, ["\n                ", arguments[2], "\n            "]);
-      var bel6 = document.createElement("h4");
-      ac(bel6, [".unity"]);
-      var bel7 = document.createElement("ul");
-      bel7.setAttribute("class", "project");
-      ac(bel7, ["\n                ", arguments[3], "\n            "]);
-      var bel8 = document.createElement("h4");
-      ac(bel8, [".other"]);
-      var bel9 = document.createElement("ul");
-      bel9.setAttribute("class", "project");
-      ac(bel9, ["\n                ", arguments[4], "\n            "]);
-      ac(bel10, ["\n            ", bel1, "\n            ", bel2, "\n            ", bel3, "\n            ", bel4, "\n            ", bel5, "\n            ", bel6, "\n            ", bel7, "\n            ", bel8, "\n            ", bel9, "\n        "]);
-      return bel10;
-    }(backToList, $projects, $drawing, $unity, $other);
+      var bel2 = document.createElement("ul");
+      bel2.setAttribute("class", "pages");
+      ac(bel2, ["\n                ", arguments[1], "\n            "]);
+      var bel3 = document.createElement("h4");
+      ac(bel3, [".projects"]);
+      var bel4 = document.createElement("ul");
+      bel4.setAttribute("class", "project");
+      ac(bel4, ["\n                ", arguments[2], "\n            "]);
+      var bel5 = document.createElement("h4");
+      ac(bel5, [".drawing"]);
+      var bel6 = document.createElement("ul");
+      bel6.setAttribute("class", "project");
+      ac(bel6, ["\n                ", arguments[3], "\n            "]);
+      var bel7 = document.createElement("h4");
+      ac(bel7, [".unity"]);
+      var bel8 = document.createElement("ul");
+      bel8.setAttribute("class", "project");
+      ac(bel8, ["\n                ", arguments[4], "\n            "]);
+      var bel9 = document.createElement("h4");
+      ac(bel9, [".other"]);
+      var bel10 = document.createElement("ul");
+      bel10.setAttribute("class", "project");
+      ac(bel10, ["\n                ", arguments[5], "\n            "]);
+      ac(bel11, ["\n            ", bel1, "\n            ", bel2, "\n            ", bel3, "\n            ", bel4, "\n            ", bel5, "\n            ", bel6, "\n            ", bel7, "\n            ", bel8, "\n            ", bel9, "\n            ", bel10, "\n        "]);
+      return bel11;
+    }(backToList, $pages, $projects, $drawing, $unity, $other);
 
     return function () {
       var ac = require('/moszeed-page/node_modules/yo-yoify/lib/appendChild.js');
 
       var bel5 = document.createElement("nav");
+      bel5.setAttribute("class", "menu");
       var bel1 = document.createElement("p");
       var bel0 = document.createElement("span");
       ac(bel0, ["Hi and welcome, i am Moszeed, from Germany. I love to write Code, to create Apps, Pages and Modules."]);
@@ -561,6 +611,10 @@
 
     function backToList() {
       emit('pushState', "/");
+    }
+
+    function openIFrameLink(key) {
+      emit('pushState', "#link/".concat(key));
     }
 
     function setOpenPage(key) {
@@ -10365,13 +10419,13 @@ function nanomorph(oldTree, newTree, options) {
   // }
   assert.equal(_typeof(oldTree), 'object', 'nanomorph: oldTree should be an object');
   assert.equal(_typeof(newTree), 'object', 'nanomorph: newTree should be an object');
-  assert.notEqual(newTree.nodeType, 11, 'nanomorph: newTree should have one root node (which is not a DocumentFragment)');
 
   if (options && options.childrenOnly) {
     updateChildren(newTree, oldTree);
     return oldTree;
   }
 
+  assert.notEqual(newTree.nodeType, 11, 'nanomorph: newTree should have one root node (which is not a DocumentFragment)');
   return walk(newTree, oldTree);
 } // Walk and morph a dom tree
 
