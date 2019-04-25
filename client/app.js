@@ -164,7 +164,7 @@
             overflow: auto;
             box-shadow: 4px 0px 6px inset #333333;
             display: grid;
-            grid-template-columns: auto 300px;
+            grid-template-columns: auto;
             grid-template-rows: auto;
             font-size: 90%;
         }

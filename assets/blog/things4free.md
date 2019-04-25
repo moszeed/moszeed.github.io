@@ -18,6 +18,7 @@
 + [Inkscape](https://inkscape.org) - Inkscape is a professional vector graphics editor for Windows, Mac OS X and Linux. It's free and open source.
 
 ## Video Editing
++ [OpenShot](https://www.openshot.org/) - OpenShot Video Editor
 + [HitFilm Express](https://fxhome.com/express) - HitFilm Express
 + [Shotcut](https://www.shotcut.org/) - "Shotcut is a free, open source, cross-platform video editor."
 + [DaVinCi Resolve](https://www.blackmagicdesign.com/de/products/davinciresolve/) - "Revolutionary tools for editing, color correction, audio post and now visual effects, all in a single application"

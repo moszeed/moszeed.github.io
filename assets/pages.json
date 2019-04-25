@@ -5,6 +5,12 @@
         "description": "a client app to generate a collage of a lastfm account",
         "link"       : "https://moszeed.github.io/lastfm-collage-page/"
     },
+    "spotifycollage": {
+        "type"       : "link",
+        "name"       : "spotify-collage-page",
+        "description": "a client app to generate a collage of a spotify account",
+        "link"       : "https://moszeed.github.io/spotify-collage-page/"
+    },
     "easysoap": {
         "type"       : "github",
         "name"       : "EasySoap",
