@@ -1,0 +1,9 @@
+node_modules
+dist
+.git
+.gitignore
+.vagrant
+docker-compose.yaml
+CLAUDE.MD
+AGENTS.MD
+docs

@@ -1,29 +1,18 @@
-# base image
-FROM mhart/alpine-node:latest
+FROM node:22-alpine AS build
 
-# set console runtime
-ENV TERM xterm
+WORKDIR /app
 
-# exclude npm cache from the image
-VOLUME /root/.npm
+COPY package*.json ./
+RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
 
-# add files ad set workdir
-COPY . /moszeed-page
-WORKDIR /moszeed-page
+COPY . .
+RUN npm run build
 
-# add runtime for native compiling
-RUN apk update && \
-    apk add nano git python make g++ gcc krb5-dev
+FROM nginx:1.27-alpine AS runtime
 
-# install dependecys, but first set oberon as registry archive
-RUN npm install
+COPY .docker/nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /app/dist /usr/share/nginx/html
 
-# remove runtime and cache
-RUN apk del git python make g++ gcc krb5-dev && \
-    rm -rf /tmp/* /var/cache/apk/* /root/.node-gyp
+EXPOSE 80
 
-# set app port
-EXPOSE 8686
-
-#launch dev environment
-CMD npm run serve
+CMD ["nginx", "-g", "daemon off;"]
