@@ -22,9 +22,10 @@
 body {
   margin: 0;
   min-width: 320px;
-  min-height: 100vh;
+  height: 100vh;
   color: var(--text);
   background: var(--content-bg);
+  overflow: hidden;
 }
 
 a {
@@ -32,13 +33,14 @@ a {
 }
 
 #root {
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .shell {
   display: grid;
   grid-template-columns: 300px minmax(0, 1fr);
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .sidebar {
@@ -49,6 +51,8 @@ a {
   color: var(--sidebar-text);
   background: var(--sidebar-bg);
   font-size: 90%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .intro-card {
@@ -138,6 +142,7 @@ a {
 }
 
 .content-panel {
+  height: 100vh;
   overflow: auto;
   padding: 20px;
   background: var(--content-bg);
@@ -271,13 +276,16 @@ a {
   min-height: calc(100% + 65px);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .shell {
     grid-template-columns: 1fr;
+    height: auto;
+    overflow: auto;
   }
 
   .sidebar {
-    overflow: auto;
+    height: auto;
+    overflow: visible;
   }
 
   .navigation {
@@ -288,6 +296,10 @@ a {
     display: inline-flex;
     margin-right: 16px;
     margin-top: 8px;
+  }
+
+  .content-panel {
+    height: auto;
   }
 }
 
