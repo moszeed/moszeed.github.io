@@ -6,16 +6,18 @@ const introText =
 export default function Sidebar({
   navigationSections,
   isLoading,
-  loadingMessage
+  loadingMessage,
+  isMobileMenuOpen,
+  onNavigate
 }) {
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${isMobileMenuOpen ? 'is-mobile-open' : ''}`}>
       <div className="intro-card">
         <span>{introText}</span>
       </div>
 
       <nav className="navigation">
-        <a className="index-link" href="#/">
+        <a className="index-link" href="#/" onClick={onNavigate}>
           .index
         </a>
 
@@ -27,14 +29,19 @@ export default function Sidebar({
               key={section.title}
               title={section.title}
               items={section.items}
+              onNavigate={onNavigate}
             />
           ))
         )}
       </nav>
 
       <footer className="sidebar-footer">
-        <a href="#impressum">Impressum</a>
-        <a href="#datenschutz">Datenschutz</a>
+        <a href="#impressum" onClick={onNavigate}>
+          Impressum
+        </a>
+        <a href="#datenschutz" onClick={onNavigate}>
+          Datenschutz
+        </a>
       </footer>
     </aside>
   );

@@ -1,4 +1,4 @@
-export default function NavSection({ title, items }) {
+export default function NavSection({ title, items, onNavigate }) {
   if (!items.length) {
     return null;
   }
@@ -9,7 +9,9 @@ export default function NavSection({ title, items }) {
       <ul>
         {items.map((item) => (
           <li key={item.href}>
-            <a href={item.href}>.{item.label}</a>
+            <a href={item.href} onClick={onNavigate}>
+              .{item.label}
+            </a>
           </li>
         ))}
       </ul>
