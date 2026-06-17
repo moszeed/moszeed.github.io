@@ -338,7 +338,8 @@ a {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 12px 0 16px;
+    margin: -12px -16px 16px;
+    padding: 12px 16px 16px;
     background: linear-gradient(to bottom, var(--sidebar-bg) 82%, rgba(18, 18, 18, 0));
   }
 
