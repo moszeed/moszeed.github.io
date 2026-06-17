@@ -339,7 +339,7 @@ a {
     align-items: center;
     gap: 12px;
     padding: 12px 0 16px;
-    background: linear-gradient(to bottom, var(--content-bg) 78%, rgba(254, 254, 254, 0));
+    background: linear-gradient(to bottom, var(--sidebar-bg) 82%, rgba(18, 18, 18, 0));
   }
 
   .menu-toggle {
@@ -350,8 +350,8 @@ a {
     width: 42px;
     height: 42px;
     padding: 0 10px;
-    border: 1px solid #cfcfcf;
-    background: #ffffff;
+    border: 1px solid #4a4a4a;
+    background: #1f1f1f;
     cursor: pointer;
   }
 
@@ -359,13 +359,13 @@ a {
     display: block;
     width: 100%;
     height: 2px;
-    background: #111111;
+    background: var(--sidebar-text);
   }
 
   .mobile-home-link {
     text-decoration: none;
     font-size: 14px;
-    color: var(--muted);
+    color: var(--sidebar-text);
   }
 
   .navigation {
