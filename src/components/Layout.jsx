@@ -45,7 +45,7 @@ export default function Layout({
             <span />
             <span />
           </button>
-          <a className="mobile-home-link" href="#/">
+          <a className="mobile-home-link" href="/">
             moszeed.github.io
           </a>
         </div>

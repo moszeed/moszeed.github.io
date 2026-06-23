@@ -8,7 +8,7 @@ export default function PostList({ posts }) {
   return (
     <div className="post-list">
       {posts.map((post) => (
-        <a key={post.key} className="post-card" href={`#blog/${post.key}`}>
+        <a key={post.key} className="post-card" href={`/blog/${post.key}/`}>
           <div className="post-date">{formatDate(post.created)}</div>
           <div className="post-copy">
             <h2>

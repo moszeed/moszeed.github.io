@@ -13,6 +13,10 @@ export async function loadSiteContent() {
     pagesResponse.json()
   ]);
 
+  return buildSiteData(posts, pages);
+}
+
+export function buildSiteData(posts, pages) {
   return {
     posts: [...posts].sort((first, second) => {
       return Date.parse(second.created) - Date.parse(first.created);

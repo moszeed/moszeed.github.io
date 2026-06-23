@@ -17,7 +17,7 @@ export default function Sidebar({
       </div>
 
       <nav className="navigation">
-        <a className="index-link" href="#/" onClick={onNavigate}>
+        <a className="index-link" href="/" onClick={onNavigate}>
           .index
         </a>
 
@@ -36,10 +36,10 @@ export default function Sidebar({
       </nav>
 
       <footer className="sidebar-footer">
-        <a href="#impressum" onClick={onNavigate}>
+        <a href="/impressum/" onClick={onNavigate}>
           Impressum
         </a>
-        <a href="#datenschutz" onClick={onNavigate}>
+        <a href="/datenschutz/" onClick={onNavigate}>
           Datenschutz
         </a>
       </footer>

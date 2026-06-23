@@ -4,14 +4,26 @@ import HomePage from './components/HomePage.jsx';
 import MarkdownPage from './components/MarkdownPage.jsx';
 import ExternalFramePage from './components/ExternalFramePage.jsx';
 import ProjectPage from './components/ProjectPage.jsx';
-import { getRouteState, routeDefinitions } from './lib/routes.js';
+import {
+  getLegacyHashRoute,
+  getRoutePath,
+  getRouteState,
+  routeDefinitions
+} from './lib/routes.js';
+import { applyRouteMetadata, buildRouteMetadata } from './lib/seo.js';
 import { loadSiteContent } from './lib/site-content.js';
 import { datenschutzMarkdown, impressumMarkdown } from './lib/legal-content.js';
 
 const loadingMessage = 'Loading content...';
 
 export default function App() {
-  const [route, setRoute] = useState(() => getRouteState(window.location.hash));
+  const [route, setRoute] = useState(() => {
+    if (typeof window === 'undefined') {
+      return { type: 'home' };
+    }
+
+    return getInitialRoute();
+  });
   const [siteData, setSiteData] = useState({
     posts: [],
     pages: {},
@@ -20,12 +32,12 @@ export default function App() {
   });
 
   useEffect(() => {
-    function onHashChange() {
-      setRoute(getRouteState(window.location.hash));
+    function onPopState() {
+      setRoute(getRouteState(window.location.pathname));
     }
 
-    window.addEventListener('hashchange', onHashChange);
-    return () => window.removeEventListener('hashchange', onHashChange);
+    window.addEventListener('popstate', onPopState);
+    return () => window.removeEventListener('popstate', onPopState);
   }, []);
 
   useEffect(() => {
@@ -61,6 +73,10 @@ export default function App() {
     };
   }, []);
 
+  useEffect(() => {
+    applyRouteMetadata(buildRouteMetadata(route, siteData));
+  }, [route, siteData]);
+
   const pageContent = renderPage(route, siteData);
 
   return (
@@ -72,6 +88,18 @@ export default function App() {
       {pageContent}
     </Layout>
   );
+}
+
+function getInitialRoute() {
+  const legacyHashRoute = getLegacyHashRoute(window.location.hash);
+
+  if (legacyHashRoute) {
+    const targetPath = getRoutePath(legacyHashRoute);
+    window.history.replaceState({}, '', targetPath);
+    return legacyHashRoute;
+  }
+
+  return getRouteState(window.location.pathname);
 }
 
 function renderPage(route, siteData) {
